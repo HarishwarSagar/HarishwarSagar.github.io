@@ -70,7 +70,7 @@
   document.querySelectorAll(".shot").forEach(function (btn) {
     btn.addEventListener("click", function () {
       var img = btn.querySelector("img");
-      if (!img || btn.classList.contains("is-empty") || !lightbox) return; // skip placeholders
+      if (!img || btn.classList.contains("is-empty") || !lightbox) return;
       lightboxImg.src = img.src;
       lightboxImg.alt = img.alt || "";
       lightbox.classList.add("is-open");
@@ -92,4 +92,81 @@
   if (toTop) toTop.addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+
+  // ====================================================================
+  // Cinematic hero parallax
+  // One cohesive motion: every layer drifts UP together, at different
+  // depths, with easing. The name leads (rises and clears the head first),
+  // the photo follows slowly, the copy and stats trail and fade — so the
+  // scene feels spacious and settled, never cluttered.
+  // ====================================================================
+  var hero = document.getElementById("hero");
+  var nameBack = document.getElementById("nameBack");
+  var heroPhoto = document.getElementById("heroPhoto");
+  var heroOrbit = document.getElementById("heroOrbit");
+  var heroContent = document.getElementById("heroContent");
+  var scrollCue = document.getElementById("scrollCue");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var isDesktop = function () { return window.innerWidth > 940; };
+
+  function clamp(v, lo, hi) { return v < lo ? lo : v > hi ? hi : v; }
+  function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+  function setLayer(el, py, ps, po) {
+    if (!el) return;
+    el.style.setProperty("--py", py.toFixed(1) + "px");
+    if (ps !== null) el.style.setProperty("--ps", ps.toFixed(3));
+    if (po !== null) el.style.setProperty("--po", po.toFixed(3));
+  }
+  function clearLayer(el) {
+    if (!el) return;
+    el.style.removeProperty("--py");
+    el.style.removeProperty("--ps");
+    el.style.removeProperty("--po");
+  }
+
+  if (hero && !reduce && "requestAnimationFrame" in window) {
+    var ticking = false;
+
+    var render = function () {
+      ticking = false;
+
+      // On mobile the hero is a normal stacked flow — no parallax.
+      if (!isDesktop()) {
+        clearLayer(nameBack); clearLayer(heroPhoto);
+        clearLayer(heroOrbit); clearLayer(heroContent);
+        if (scrollCue) scrollCue.style.removeProperty("--po");
+        return;
+      }
+
+      var vh = window.innerHeight || 1;
+      // The whole effect plays out over the first ~95% of a viewport of scroll.
+      var p = clamp(window.scrollY / (vh * 0.95), 0, 1);
+      var e = easeOutCubic(p);
+
+      // Name: leads the motion, rises well clear, fades only in the back third.
+      var nameFade = e < 0.4 ? 0.92 : Math.max(0, 0.92 * (1 - (e - 0.4) / 0.6));
+      setLayer(nameBack, -e * vh * 0.42, 1 + e * 0.06, nameFade);
+
+      // Photo: deepest layer, drifts slowly, softens gently.
+      setLayer(heroPhoto, -e * vh * 0.15, 1 - e * 0.04, 1 - e * 0.45);
+
+      // Stats: mid layer, lift and fade out.
+      setLayer(heroOrbit, -e * vh * 0.26, null, clamp(1 - e * 1.25, 0, 1));
+
+      // Copy: trails, fades as it leaves.
+      setLayer(heroContent, -e * vh * 0.10, null, clamp(1 - e * 1.3, 0, 1));
+
+      // Scroll cue: disappears almost immediately once scrolling starts.
+      if (scrollCue) scrollCue.style.setProperty("--po", clamp(1 - e * 3, 0, 1).toFixed(3));
+    };
+
+    var onHeroScroll = function () {
+      if (!ticking) { window.requestAnimationFrame(render); ticking = true; }
+    };
+
+    render();
+    window.addEventListener("scroll", onHeroScroll, { passive: true });
+    window.addEventListener("resize", render);
+  }
 })();

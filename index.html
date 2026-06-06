@@ -19,18 +19,24 @@
   <meta name="twitter:description" content="I run the revenue strategy and build the systems that scale it." />
   <meta name="twitter:image" content="https://harishwarsagar.com/assets/og-image.jpg" />
 
-  <meta name="theme-color" content="#0B1120" />
+  <meta name="theme-color" content="#0a0706" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Living color that drifts behind everything -->
+  <div class="bg-aurora" aria-hidden="true">
+    <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b><b class="b5"></b>
+  </div>
+  <div class="bg-veil" aria-hidden="true"></div>
 
   <!-- ===== NAV ===== -->
   <header class="nav" id="nav">
@@ -57,57 +63,146 @@
   <main id="main">
     <!-- ===== HERO ===== -->
     <section class="hero" id="hero">
-      <div class="hero__glow" aria-hidden="true"></div>
-      <div class="container hero__inner">
-        <div class="hero__content reveal">
-          <span class="badge"><span class="badge__dot"></span> Open to remote roles · Full US EST/PST overlap</span>
-          <h1 class="hero__title">Harishwar Sagar</h1>
-          <p class="hero__tagline">Revenue Operations &amp; GTM <span class="accent">— with a builder's edge</span></p>
-          <p class="hero__sub">I run the revenue strategy <em>and</em> build the systems that scale it — full-funnel growth, pricing &amp; P&amp;L, automation, and an engineer's toolkit. The rare hybrid who can set the plan and ship the machine.</p>
+      <div class="hero__aura" aria-hidden="true"></div>
 
-          <div class="hero__actions">
-            <button class="btn btn--primary" data-cal-namespace="harishwar" data-cal-link="harishwar" data-cal-config='{"layout":"month_view"}'>
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-              Book a call
-            </button>
-            <a class="btn btn--ghost" href="resume/Harishwar_Sagar_GTM_RevOps_Resume.pdf" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
-              Download résumé
-            </a>
-          </div>
+      <!-- Giant name — top half, behind the crown of the head -->
+      <h1 class="hero__nameback" id="nameBack" aria-label="Harishwar Sagar">
+        <span class="ln1">HARISHWAR</span>
+        <span class="ln2">SAGAR</span>
+      </h1>
 
-          <div class="hero__links">
-            <a href="mailto:SagarHarishwar@gmail.com">SagarHarishwar@gmail.com</a>
-            <span class="sep">·</span>
-            <a href="https://linkedin.com/in/harishwarsagar" target="_blank" rel="noopener">LinkedIn</a>
-          </div>
+      <!-- Headshot (auto-loads when assets/headshot.png exists) -->
+      <div class="hero__photo" id="heroPhoto">
+        <img src="assets/headshot.png" alt="Harishwar Sagar" onerror="this.parentElement.classList.add('is-empty');this.remove();" />
+      </div>
+
+      <!-- Accomplishments framing the subject -->
+      <div class="hero__orbit" id="heroOrbit" aria-hidden="true">
+        <div class="orb orb--tl"><b>~10x</b><span>Daily revenue growth</span></div>
+        <div class="orb orb--tr"><b>50%</b><span>Gross margin held</span></div>
+        <div class="orb orb--bl"><b>−60%</b><span>Operational admin cut</span></div>
+        <div class="orb orb--br"><b>33%</b><span>Inbound close rate</span></div>
+      </div>
+
+      <!-- Foreground copy — sits low, where the photo melts into the page -->
+      <div class="hero__content" id="heroContent">
+        <p class="hero__tagline">
+          Revenue Operations <span class="amp">&amp;</span> Go-To-Market
+          <span class="edge">with a builder's edge</span>
+        </p>
+        <div class="hero__actions">
+          <button class="btn btn--primary" data-cal-namespace="harishwar" data-cal-link="harishwar" data-cal-config='{"layout":"month_view"}'>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            Book a call
+          </button>
+          <a class="btn btn--ghost" href="resume/Harishwar_Sagar_GTM_RevOps_Resume.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+            Download résumé
+          </a>
         </div>
+        <span class="hero__avail"><span class="badge__dot"></span> Open to remote roles · Revenue Operations &amp; Growth Marketing · Full US overlap</span>
 
-        <div class="hero__media reveal">
-          <div class="hero__photo" data-placeholder="Your headshot → assets/headshot.jpg">
-            <img src="assets/headshot.jpg" alt="Harishwar Sagar" onerror="this.parentElement.classList.add('is-empty');this.remove();" />
-          </div>
+        <!-- Mobile-only stacked stats -->
+        <div class="hero__stats">
+          <div class="orb"><b>~10x</b><span>Daily revenue</span></div>
+          <div class="orb"><b>50%</b><span>Gross margin</span></div>
+          <div class="orb"><b>−60%</b><span>Admin cut</span></div>
+          <div class="orb"><b>33%</b><span>Close rate</span></div>
         </div>
       </div>
 
-      <div class="container">
-        <div class="stats reveal">
-          <div class="stat"><span class="stat__num">~10x</span><span class="stat__label">Daily revenue growth</span></div>
-          <div class="stat"><span class="stat__num">50%</span><span class="stat__label">Gross margin held</span></div>
-          <div class="stat"><span class="stat__num">−60%</span><span class="stat__label">Operational admin cut</span></div>
-          <div class="stat"><span class="stat__num">33%</span><span class="stat__label">Inbound close rate</span></div>
+      <a class="scroll-cue" id="scrollCue" href="#about" aria-label="Scroll to explore">
+        <span>Scroll</span>
+        <span class="scroll-cue__line"></span>
+      </a>
+      <div class="hero__fade" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== TOOLS MARQUEE ===== -->
+    <section class="marquee" aria-label="Tools I work with">
+      <div class="marquee__strip">
+        <div class="marquee__track">
+          <div class="marquee__group">
+            <span class="chip"><span class="chip__ico" style="--c:#EA4B71" data-m="n8"><img src="assets/logos/n8n.svg" alt="" loading="lazy" onerror="this.remove()"></span>n8n</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#FF4F00" data-m="Zp"><img src="assets/logos/zapier.svg" alt="" loading="lazy" onerror="this.remove()"></span>Zapier</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#6D00CC" data-m="Mk"><img src="assets/logos/make.svg" alt="" loading="lazy" onerror="this.remove()"></span>Make</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#5B8DEF" data-m="Cl"></span>Clay</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#5C4EE5" data-m="Ap"></span>Apollo</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#FF7A59" data-m="Hs"><img src="assets/logos/hubspot.svg" alt="" loading="lazy" onerror="this.remove()"></span>HubSpot</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#00A1E0" data-m="Sf"><img src="assets/logos/salesforce.svg" alt="" loading="lazy" onerror="this.remove()"></span>Salesforce</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#4285F4" data-m="Lk"><img src="assets/logos/looker.svg" alt="" loading="lazy" onerror="this.remove()"></span>Looker</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#E8710A" data-m="GA"><img src="assets/logos/ga4.svg" alt="" loading="lazy" onerror="this.remove()"></span>GA4</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#3776AB" data-m="Py"><img src="assets/logos/python.svg" alt="" loading="lazy" onerror="this.remove()"></span>Python</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#00A7A0" data-m="SQL"><img src="assets/logos/sql.svg" alt="" loading="lazy" onerror="this.remove()"></span>SQL</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#635BFF" data-m="{}"></span>Webhooks</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#6C5CE7" data-m="In"></span>Instantly</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#0A66C2" data-m="Li"><img src="assets/logos/linkedin.svg" alt="" loading="lazy" onerror="this.remove()"></span>Sales Navigator</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#D97757" data-m="C"><img src="assets/logos/claude.svg" alt="" loading="lazy" onerror="this.remove()"></span>Claude</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#10A37F" data-m="AI"></span>OpenAI</span>
+            <i class="spark"></i>
+          </div>
+          <div class="marquee__group" aria-hidden="true">
+            <span class="chip"><span class="chip__ico" style="--c:#EA4B71" data-m="n8"><img src="assets/logos/n8n.svg" alt="" loading="lazy" onerror="this.remove()"></span>n8n</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#FF4F00" data-m="Zp"><img src="assets/logos/zapier.svg" alt="" loading="lazy" onerror="this.remove()"></span>Zapier</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#6D00CC" data-m="Mk"><img src="assets/logos/make.svg" alt="" loading="lazy" onerror="this.remove()"></span>Make</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#5B8DEF" data-m="Cl"></span>Clay</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#5C4EE5" data-m="Ap"></span>Apollo</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#FF7A59" data-m="Hs"><img src="assets/logos/hubspot.svg" alt="" loading="lazy" onerror="this.remove()"></span>HubSpot</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#00A1E0" data-m="Sf"><img src="assets/logos/salesforce.svg" alt="" loading="lazy" onerror="this.remove()"></span>Salesforce</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#4285F4" data-m="Lk"><img src="assets/logos/looker.svg" alt="" loading="lazy" onerror="this.remove()"></span>Looker</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#E8710A" data-m="GA"><img src="assets/logos/ga4.svg" alt="" loading="lazy" onerror="this.remove()"></span>GA4</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#3776AB" data-m="Py"><img src="assets/logos/python.svg" alt="" loading="lazy" onerror="this.remove()"></span>Python</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#00A7A0" data-m="SQL"><img src="assets/logos/sql.svg" alt="" loading="lazy" onerror="this.remove()"></span>SQL</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#635BFF" data-m="{}"></span>Webhooks</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#6C5CE7" data-m="In"></span>Instantly</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#0A66C2" data-m="Li"><img src="assets/logos/linkedin.svg" alt="" loading="lazy" onerror="this.remove()"></span>Sales Navigator</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#D97757" data-m="C"><img src="assets/logos/claude.svg" alt="" loading="lazy" onerror="this.remove()"></span>Claude</span>
+            <i class="spark"></i>
+            <span class="chip"><span class="chip__ico" style="--c:#10A37F" data-m="AI"></span>OpenAI</span>
+            <i class="spark"></i>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ===== ABOUT ===== -->
-    <section class="section" id="about">
+    <section class="section section--seam" id="about">
       <div class="container">
         <div class="section__head reveal">
-          <span class="eyebrow">About</span>
+          <span class="eyebrow">Remote Revenue Operations &amp; Growth</span>
           <h2 class="section__title">From DevOps to Revenue</h2>
         </div>
         <div class="about reveal">
+          <p>I run the revenue strategy <strong>and</strong> build the systems that scale it — full-funnel growth, pricing &amp; P&amp;L, automation, and an engineer's toolkit. The rare hybrid who can set the plan and ship the machine.</p>
           <p>I started in core engineering — building CI/CD pipelines and cloud infrastructure at <strong>Oracle (Cerner)</strong> and <strong>Checkpoint Systems</strong>. Daily calls translating technical fixes into business value for US stakeholders pulled me toward the revenue side, and I never looked back.</p>
           <p>Today I own go-to-market and revenue operations end to end: <strong>pricing, forecasting, P&amp;L, and demand generation</strong> — and I build the <strong>automation that connects it all</strong>. I scaled a venture roughly <strong>10x on daily revenue</strong>, held <strong>50% margins</strong>, and cut operational admin <strong>~60%</strong> with a custom "Revenue OS."</p>
           <p>The combination is the point: someone who can both <strong>set the revenue strategy</strong> and <strong>ship the systems</strong> that run it.</p>
@@ -313,32 +408,53 @@
     <!-- ===== CONTACT / BOOK ===== -->
     <section class="section" id="contact">
       <div class="container">
-        <div class="section__head reveal">
+        <div class="section__head section__head--center reveal">
           <span class="eyebrow">Let's talk</span>
-          <h2 class="section__title">Book a call</h2>
-          <p class="section__lead">Grab a time that works for you — or reach out directly.</p>
+          <h2 class="section__title">Let's build your revenue engine</h2>
+          <p class="section__lead">Pick a time that works, or reach out directly — whatever's easiest for you.</p>
         </div>
-        <div class="contact reveal">
-          <div class="contact__embed">
-            <div id="cal-inline"></div>
+
+        <div class="connect reveal">
+          <!-- Primary: book a call (opens Cal popup, on-theme) -->
+          <button class="connect__cta glass" data-cal-namespace="harishwar" data-cal-link="harishwar" data-cal-config='{"layout":"month_view"}'>
+            <span class="connect__cta-ico">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            </span>
+            <span class="connect__cta-txt">
+              <strong>Book a discovery call</strong>
+              <small>45 min · Google Meet · instant confirm</small>
+            </span>
+            <span class="connect__cta-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </button>
+
+          <!-- Secondary: glass icon tiles -->
+          <div class="connect__grid">
+            <a class="connect__tile glass" href="mailto:SagarHarishwar@gmail.com" aria-label="Email Harishwar">
+              <span class="connect__ico">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+              </span>
+              <strong>Email</strong>
+              <small>SagarHarishwar@gmail.com</small>
+            </a>
+            <a class="connect__tile glass" href="https://linkedin.com/in/harishwarsagar" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+              <span class="connect__ico">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5.001A2.5 2.5 0 014.98 3.5zM3 9h4v12H3zM9 9h3.8v1.64h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21H9z"/></svg>
+              </span>
+              <strong>LinkedIn</strong>
+              <small>/in/harishwarsagar</small>
+            </a>
+            <a class="connect__tile glass" href="resume/Harishwar_Sagar_GTM_RevOps_Resume.pdf" target="_blank" rel="noopener" aria-label="Download résumé">
+              <span class="connect__ico">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3v5h5"/><path d="M14 3H6a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M12 12v5m0 0l-2-2m2 2l2-2"/></svg>
+              </span>
+              <strong>Résumé</strong>
+              <small>Download PDF</small>
+            </a>
           </div>
-          <aside class="contact__side">
-            <a class="contact__link" href="mailto:SagarHarishwar@gmail.com">
-              <span class="contact__ico">✉️</span> SagarHarishwar@gmail.com
-            </a>
-            <a class="contact__link" href="https://cal.com/harishwar" target="_blank" rel="noopener">
-              <span class="contact__ico">📅</span> cal.com/harishwar
-            </a>
-            <a class="contact__link" href="https://linkedin.com/in/harishwarsagar" target="_blank" rel="noopener">
-              <span class="contact__ico">in</span> linkedin.com/in/harishwarsagar
-            </a>
-            <a class="contact__link" href="resume/Harishwar_Sagar_GTM_RevOps_Resume.pdf" target="_blank" rel="noopener">
-              <span class="contact__ico">📄</span> Download résumé (PDF)
-            </a>
-            <div class="contact__avail">
-              <span class="badge__dot"></span> Open to remote roles · Full US EST/PST overlap
-            </div>
-          </aside>
+
+          <div class="connect__avail"><span class="badge__dot"></span> Open to remote roles · Full US EST/PST overlap</div>
         </div>
       </div>
     </section>
@@ -367,7 +483,6 @@
   <script type="text/javascript">
     (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
     Cal("init", "harishwar", { origin: "https://cal.com" });
-    Cal.ns.harishwar("inline", { elementOrSelector: "#cal-inline", config: { layout: "month_view" }, calLink: "harishwar" });
     Cal.ns.harishwar("ui", { hideEventTypeDetails: false, layout: "month_view" });
   </script>
 
