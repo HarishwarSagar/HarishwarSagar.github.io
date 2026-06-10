@@ -1,172 +1,211 @@
-/* Harishwar Sagar — portfolio interactions (vanilla JS, no deps) */
+/* ============================================================
+   Harishwar Sagar — Portfolio interactions
+   ============================================================ */
 (function () {
   "use strict";
 
-  // Footer year
+  /* ---------- year ---------- */
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Sticky nav background after scroll
-  var nav = document.getElementById("nav");
-  var onScroll = function () {
-    if (window.scrollY > 24) nav.classList.add("is-stuck");
-    else nav.classList.remove("is-stuck");
-  };
-  onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
-
-  // Mobile menu toggle
+  /* ---------- mobile nav ---------- */
   var toggle = document.getElementById("navToggle");
-  if (toggle) {
+  var mobile = document.getElementById("navMobile");
+  function closeMobile() {
+    if (!mobile) return;
+    mobile.classList.remove("open");
+    if (toggle) toggle.setAttribute("aria-expanded", "false");
+  }
+  if (toggle && mobile) {
     toggle.addEventListener("click", function () {
-      var open = nav.classList.toggle("is-open");
+      var open = mobile.classList.toggle("open");
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
     });
-    nav.querySelectorAll(".nav__links a").forEach(function (a) {
-      a.addEventListener("click", function () {
-        nav.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
-      });
+    mobile.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", closeMobile);
+    });
+    document.addEventListener("click", function (e) {
+      if (!mobile.contains(e.target) && !toggle.contains(e.target)) closeMobile();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeMobile();
     });
   }
 
-  // Scroll-reveal
-  var reveals = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add("is-visible"); io.unobserve(e.target); }
-      });
-    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
-    reveals.forEach(function (el) { io.observe(el); });
+  /* ---------- scroll reveal (scroll-position based — robust everywhere) ---------- */
+  var reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var reveals = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+  var tItems = Array.prototype.slice.call(document.querySelectorAll(".timeline__item"));
+
+  // stagger siblings for a gentle cascade
+  reveals.forEach(function (el, i) {
+    el.style.transitionDelay = (Math.min(i % 4, 3) * 70) + "ms";
+  });
+
+  if (reduceMotion) {
+    reveals.forEach(function (el) { el.classList.add("is-in"); });
+    tItems.forEach(function (el) { el.classList.add("is-in"); });
   } else {
-    reveals.forEach(function (el) { el.classList.add("is-visible"); });
-  }
-
-  // Active nav link via section observation
-  var sections = document.querySelectorAll("main section[id]");
-  var navLinks = {};
-  document.querySelectorAll(".nav__links a").forEach(function (a) {
-    navLinks[a.getAttribute("href")] = a;
-  });
-  if ("IntersectionObserver" in window) {
-    var spy = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        var link = navLinks["#" + e.target.id];
-        if (!link) return;
-        if (e.isIntersecting) {
-          Object.keys(navLinks).forEach(function (k) { navLinks[k].classList.remove("is-active"); });
-          link.classList.add("is-active");
-        }
+    var checkReveal = function () {
+      var vh = window.innerHeight || document.documentElement.clientHeight;
+      var trigger = vh * 0.92;
+      var still = false;
+      reveals.forEach(function (el) {
+        if (el.classList.contains("is-in")) return;
+        if (el.getBoundingClientRect().top < trigger) el.classList.add("is-in");
+        else still = true;
       });
-    }, { threshold: 0.5 });
-    sections.forEach(function (s) { spy.observe(s); });
-  }
-
-  // Lightbox for certificate / proof images
-  var lightbox = document.getElementById("lightbox");
-  var lightboxImg = lightbox ? lightbox.querySelector("img") : null;
-  var closeBtn = lightbox ? lightbox.querySelector(".lightbox__close") : null;
-  document.querySelectorAll(".shot").forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      var img = btn.querySelector("img");
-      if (!img || btn.classList.contains("is-empty") || !lightbox) return;
-      lightboxImg.src = img.src;
-      lightboxImg.alt = img.alt || "";
-      lightbox.classList.add("is-open");
-      lightbox.setAttribute("aria-hidden", "false");
-    });
-  });
-  function closeLightbox() {
-    if (!lightbox) return;
-    lightbox.classList.remove("is-open");
-    lightbox.setAttribute("aria-hidden", "true");
-    lightboxImg.src = "";
-  }
-  if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
-  if (lightbox) lightbox.addEventListener("click", function (e) { if (e.target === lightbox) closeLightbox(); });
-  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLightbox(); });
-
-  // Back to top
-  var toTop = document.getElementById("toTop");
-  if (toTop) toTop.addEventListener("click", function () {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
-  // ====================================================================
-  // Cinematic hero parallax
-  // One cohesive motion: every layer drifts UP together, at different
-  // depths, with easing. The name leads (rises and clears the head first),
-  // the photo follows slowly, the copy and stats trail and fade — so the
-  // scene feels spacious and settled, never cluttered.
-  // ====================================================================
-  var hero = document.getElementById("hero");
-  var nameBack = document.getElementById("nameBack");
-  var heroPhoto = document.getElementById("heroPhoto");
-  var heroOrbit = document.getElementById("heroOrbit");
-  var heroContent = document.getElementById("heroContent");
-  var scrollCue = document.getElementById("scrollCue");
-  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var isDesktop = function () { return window.innerWidth > 940; };
-
-  function clamp(v, lo, hi) { return v < lo ? lo : v > hi ? hi : v; }
-  function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
-
-  function setLayer(el, py, ps, po) {
-    if (!el) return;
-    el.style.setProperty("--py", py.toFixed(1) + "px");
-    if (ps !== null) el.style.setProperty("--ps", ps.toFixed(3));
-    if (po !== null) el.style.setProperty("--po", po.toFixed(3));
-  }
-  function clearLayer(el) {
-    if (!el) return;
-    el.style.removeProperty("--py");
-    el.style.removeProperty("--ps");
-    el.style.removeProperty("--po");
-  }
-
-  if (hero && !reduce && "requestAnimationFrame" in window) {
+      tItems.forEach(function (el) {
+        if (el.classList.contains("is-in")) return;
+        if (el.getBoundingClientRect().top < trigger) el.classList.add("is-in");
+        else still = true;
+      });
+      return still;
+    };
     var ticking = false;
+    var onRevealScroll = function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () { checkReveal(); ticking = false; });
+    };
+    window.addEventListener("scroll", onRevealScroll, { passive: true });
+    window.addEventListener("resize", onRevealScroll, { passive: true });
+    // initial passes (cover late layout / font load)
+    checkReveal();
+    requestAnimationFrame(checkReveal);
+    setTimeout(checkReveal, 250);
+    window.addEventListener("load", function () { setTimeout(checkReveal, 60); });
+    // failsafe: never leave content hidden (set inline styles directly, independent of CSS transitions)
+    setTimeout(function () {
+      var all = reveals.concat(tItems);
+      all.forEach(function (el) {
+        el.classList.add("is-in");
+        el.style.opacity = "1";
+        el.style.transform = "none";
+      });
+    }, 4500);
+    // also reveal everything if the tab was hidden on load and later becomes visible
+    document.addEventListener("visibilitychange", function () {
+      if (!document.hidden) { checkReveal(); }
+    });
+  }
 
-    var render = function () {
-      ticking = false;
+  /* ---------- metric count-up ---------- */
+  function animateCount(el) {
+    var target = parseFloat(el.getAttribute("data-count")) || 0;
+    var prefix = el.getAttribute("data-prefix") || "";
+    var suffix = el.getAttribute("data-suffix") || "";
+    var dur = 1400, start = null;
+    var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) { el.textContent = prefix + target + suffix; return; }
+    function step(ts) {
+      if (start === null) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      var val = Math.round(target * eased);
+      el.textContent = prefix + val + suffix;
+      if (p < 1) requestAnimationFrame(step);
+      else el.textContent = prefix + target + suffix;
+    }
+    requestAnimationFrame(step);
+  }
+  var counts = Array.prototype.slice.call(document.querySelectorAll(".metric__value[data-count]"));
+  var countDone = [];
+  var checkCounts = function () {
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    counts.forEach(function (el, i) {
+      if (countDone[i]) return;
+      if (el.getBoundingClientRect().top < vh * 0.85) { countDone[i] = true; animateCount(el); }
+    });
+  };
+  window.addEventListener("scroll", checkCounts, { passive: true });
+  checkCounts();
+  setTimeout(checkCounts, 300);
+  setTimeout(function () { counts.forEach(function (el, i) { if (!countDone[i]) { countDone[i] = true; animateCount(el); } }); }, 4200);
 
-      // On mobile the hero is a normal stacked flow — no parallax.
-      if (!isDesktop()) {
-        clearLayer(nameBack); clearLayer(heroPhoto);
-        clearLayer(heroOrbit); clearLayer(heroContent);
-        if (scrollCue) scrollCue.style.removeProperty("--po");
+  /* ---------- back to top ---------- */
+  var toTop = document.getElementById("toTop");
+  if (toTop) {
+    var onScroll = function () {
+      if (window.scrollY > 600) toTop.classList.add("show");
+      else toTop.classList.remove("show");
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    toTop.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    });
+  }
+
+  /* ---------- nav active link on scroll ---------- */
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav__links a[href^="#"]'));
+  var navMap = navLinks.map(function (a) {
+    return { a: a, sec: document.querySelector(a.getAttribute("href")) };
+  }).filter(function (o) { return o.sec; });
+  function setActive() {
+    var pos = window.scrollY + (window.innerHeight || 0) * 0.32;
+    var current = null;
+    navMap.forEach(function (o) {
+      if (o.sec.offsetTop <= pos) current = o.a;
+    });
+    navMap.forEach(function (o) {
+      var on = o.a === current;
+      o.a.style.color = on ? "var(--ink)" : "";
+      o.a.style.background = on ? "rgba(245,237,226,.06)" : "";
+    });
+  }
+  if (navMap.length) {
+    window.addEventListener("scroll", setActive, { passive: true });
+    setActive();
+  }
+
+  /* ---------- contact form ---------- */
+  var form = document.getElementById("contactForm");
+  var status = document.getElementById("formStatus");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (status) { status.className = "form-status"; status.textContent = ""; }
+      if (!form.checkValidity()) {
+        if (status) { status.className = "form-status err"; status.textContent = "Please fill in the required fields."; }
+        form.reportValidity();
+        return;
+      }
+      var btn = form.querySelector('button[type="submit"]');
+      var orig = btn ? btn.textContent : "";
+      if (btn) { btn.textContent = "Sending…"; btn.disabled = true; }
+
+      var action = form.getAttribute("action") || "";
+      var usable = action && action.indexOf("your-id") === -1;
+
+      if (!usable) {
+        // No live endpoint configured yet — fail gracefully toward email.
+        setTimeout(function () {
+          if (status) {
+            status.className = "form-status ok";
+            status.innerHTML = 'Thanks! Form delivery isn\u2019t wired up yet — reach me directly at <a href="mailto:SagarHarishwar@gmail.com" style="color:inherit;text-decoration:underline">SagarHarishwar@gmail.com</a>.';
+          }
+          if (btn) { btn.textContent = orig; btn.disabled = false; }
+        }, 600);
         return;
       }
 
-      var vh = window.innerHeight || 1;
-      // The whole effect plays out over the first ~95% of a viewport of scroll.
-      var p = clamp(window.scrollY / (vh * 0.95), 0, 1);
-      var e = easeOutCubic(p);
-
-      // Name: leads the motion, rises well clear, fades only in the back third.
-      var nameFade = e < 0.4 ? 0.92 : Math.max(0, 0.92 * (1 - (e - 0.4) / 0.6));
-      setLayer(nameBack, -e * vh * 0.42, 1 + e * 0.06, nameFade);
-
-      // Photo: deepest layer, drifts slowly, softens gently.
-      setLayer(heroPhoto, -e * vh * 0.15, 1 - e * 0.04, 1 - e * 0.45);
-
-      // Stats: mid layer, lift and fade out.
-      setLayer(heroOrbit, -e * vh * 0.26, null, clamp(1 - e * 1.25, 0, 1));
-
-      // Copy: trails, fades as it leaves.
-      setLayer(heroContent, -e * vh * 0.10, null, clamp(1 - e * 1.3, 0, 1));
-
-      // Scroll cue: disappears almost immediately once scrolling starts.
-      if (scrollCue) scrollCue.style.setProperty("--po", clamp(1 - e * 3, 0, 1).toFixed(3));
-    };
-
-    var onHeroScroll = function () {
-      if (!ticking) { window.requestAnimationFrame(render); ticking = true; }
-    };
-
-    render();
-    window.addEventListener("scroll", onHeroScroll, { passive: true });
-    window.addEventListener("resize", render);
+      fetch(action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" }
+      }).then(function (res) {
+        if (res.ok) {
+          if (status) { status.className = "form-status ok"; status.textContent = "Thanks — I\u2019ll be in touch shortly."; }
+          form.reset();
+        } else {
+          throw new Error("bad response");
+        }
+      }).catch(function () {
+        if (status) { status.className = "form-status err"; status.textContent = "Something went wrong. Email me at SagarHarishwar@gmail.com."; }
+      }).finally(function () {
+        if (btn) { btn.textContent = orig; btn.disabled = false; }
+      });
+    });
   }
 })();
