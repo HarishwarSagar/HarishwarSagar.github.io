@@ -10,7 +10,8 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Harishwar Sagar — Revenue Operations & GTM Engineer">
 <meta property="og:description" content="Runs the strategy. Builds the systems. Scaled a venture ~10× on daily revenue at ~50% gross margins.">
-<meta property="og:url" content="https://harishwarsagar.com">
+<meta property="og:url" content="https://harishwarsagar.github.io/">
+<link rel="canonical" href="https://harishwarsagar.github.io/">
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#FBF6ED">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23FF4D00'/%3E%3Ctext x='32' y='43' font-family='Arial Black,sans-serif' font-size='28' font-weight='900' fill='%23FBF6ED' text-anchor='middle'%3EHS%3C/text%3E%3C/svg%3E">
@@ -387,7 +388,15 @@ section{padding:clamp(64px,10vh,118px) 0;position:relative}
 
 /* ─────────── 04 · EDUCATION ─────────── */
 .edu{background:var(--bg-2);border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2)}
-.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.4vw,28px)}
+.edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,28px)}
+.edu-feat{display:flex;flex-direction:column;align-items:flex-start;border-color:rgba(255,77,0,.4);position:relative;overflow:hidden}
+.edu-feat::after{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:var(--grad)}
+.feat-row{display:flex;align-items:center;gap:18px;margin-top:4px}
+.badge-img{width:82px;height:82px;flex:0 0 auto;border-radius:12px;filter:drop-shadow(0 8px 18px rgba(255,77,0,.25));transition:transform .45s var(--bounce)}
+.edu-feat:hover .badge-img{transform:scale(1.08) rotate(-3deg)}
+.feat-link{margin-top:18px;font-family:var(--mono);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--flame);display:inline-flex;gap:8px;align-items:center}
+.vico{transition:transform .3s var(--ease)}
+.edu-feat:hover .vico{transform:translate(3px,-3px)}
 .edu-card{
   background:var(--card);border:1px solid var(--line-2);border-radius:26px;padding:clamp(26px,3vw,40px);
   transition:transform .4s var(--bounce),box-shadow .4s;box-shadow:0 8px 26px -18px rgba(22,17,10,.16);
@@ -444,6 +453,8 @@ footer{border-top:1px solid var(--line-2);padding:32px 0}
 /* ─────────── RESPONSIVE ─────────── */
 @media(max-width:1020px){
   .num-grid{grid-template-columns:1fr 1fr}
+  .edu-grid{grid-template-columns:1fr 1fr}
+  .edu-feat{grid-column:span 2}
   .clock{display:none}
 }
 @media(max-width:860px){
@@ -484,6 +495,7 @@ footer{border-top:1px solid var(--line-2);padding:32px 0}
   .sec-head{margin-bottom:34px}
   .sec-note{font-size:.9rem}
   .edu-grid{grid-template-columns:1fr;gap:12px}
+  .edu-feat{grid-column:auto}
   .edu-card{border-radius:20px}
   .eng-card{border-radius:22px}
   .xp-card{padding:22px;border-radius:20px}
@@ -780,20 +792,30 @@ footer{border-top:1px solid var(--line-2);padding:32px 0}
       </div>
     </div>
     <div class="edu-grid">
-      <div class="edu-card rv">
+      <a class="edu-card edu-feat rv" href="https://app-na2.hubspot.com/academy/achievements/lqvqpbr0/en/1/harishwar-sagar/hubspot-revenue-operations-certified" target="_blank" rel="noopener">
+        <span class="edu-kind">Certification &middot; Verified</span>
+        <div class="feat-row">
+          <img class="badge-img" src="https://hubspot-credentials-na1.s3.amazonaws.com/prod/badges/user/bc414291c88f4d60a7b9ed0e04c82bf5.png" alt="HubSpot Revenue Operations Certified badge" width="82" height="82" loading="lazy">
+          <div>
+            <h3>HubSpot Revenue Operations Certified</h3>
+            <p>HubSpot Academy &middot; Valid Jun 2026 &mdash; Jul 2027</p>
+          </div>
+        </div>
+        <span class="feat-link">Verify credential <span class="vico">&#8599;</span></span>
+      </a>
+      <div class="edu-card rv rv1">
         <span class="edu-kind">Degree</span>
         <h3>B.Tech — Electronics &amp; Communications Engineering</h3>
         <p>CMR Institute of Technology, Bangalore · 2020</p>
       </div>
-      <div class="edu-card rv rv1">
+      <div class="edu-card rv rv2">
         <span class="edu-kind">Postgraduate Certificate</span>
         <h3>Cloud Computing</h3>
         <p>Manipal University · 2021</p>
       </div>
     </div>
     <div class="cert-row rv">
-      <span class="cert">HubSpot Revenue Operations — HubSpot Academy (in progress)</span>
-      <span class="cert">AZ-900: Microsoft Azure Fundamentals — 2020</span>
+      <span class="cert">AZ-900: Microsoft Azure Fundamentals — Microsoft &middot; 2020</span>
     </div>
   </div>
 </section>
