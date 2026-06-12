@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mobile preview harness — delete before publishing</title>
+<style>
+  body{margin:0;background:#1b1b1f;color:#eee;font:12px/1.4 Consolas,monospace;padding:10px}
+  h1{font-size:13px;font-weight:normal;margin:0 0 10px;color:#9ad}
+  .grid{display:flex;gap:14px;flex-wrap:wrap}
+  .col{display:flex;flex-direction:column;gap:8px}
+  .lab{color:#8f8;font-size:11px}
+  .cell{overflow:hidden;background:#fff;border:1px solid #555;border-radius:4px;position:relative}
+  .cell iframe{border:0;transform-origin:top left;display:block}
+  /* top region: first 1000px of page */
+  .w360 .cell{width:162px;height:450px}
+  .w360 iframe{width:360px;height:2400px;transform:scale(.45)}
+  .w390 .cell{width:176px;height:450px}
+  .w390 iframe{width:390px;height:2400px;transform:scale(.45)}
+  .w430 .cell{width:194px;height:450px}
+  .w430 iframe{width:430px;height:2400px;transform:scale(.45)}
+  /* second region: 1000px-2000px of page */
+  .r2 iframe{transform:scale(.45) translateY(-1000px)}
+</style>
+</head>
+<body>
+<h1>MOBILE PREVIEW — 360 / 390 / 430 px · row 1 = page top · row 2 = next region (dev tool, delete before publishing)</h1>
+<div class="grid">
+  <div class="col w360"><span class="lab">360px · top</span><div class="cell"><iframe src="index.html?v=6"></iframe></div></div>
+  <div class="col w390"><span class="lab">390px · top</span><div class="cell"><iframe src="index.html?v=6"></iframe></div></div>
+  <div class="col w430"><span class="lab">430px · top</span><div class="cell"><iframe src="index.html?v=6"></iframe></div></div>
+  <div class="col w360 r2"><span class="lab">360px · scrolled</span><div class="cell"><iframe src="index.html?v=6"></iframe></div></div>
+  <div class="col w390 r2"><span class="lab">390px · scrolled</span><div class="cell"><iframe src="index.html?v=6"></iframe></div></div>
+  <div class="col w430 r2"><span class="lab">430px · scrolled</span><div class="cell"><iframe src="index.html?v=6"></iframe></div></div>
+</div>
+</body>
+</html>

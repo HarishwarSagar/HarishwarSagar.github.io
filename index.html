@@ -1,386 +1,1003 @@
 <!DOCTYPE html>
+<!-- Harishwar Sagar · Portfolio v2 -->
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harishwar Sagar — Revenue Operations &amp; GTM</title>
-  <meta name="description" content="Harishwar Sagar — Revenue Operations &amp; GTM with a builder's edge. Engineering background, revenue mindset, systems-first execution. From pricing and forecasting to demand generation and automation." />
-  <meta name="author" content="Harishwar Sagar" />
-  <meta name="theme-color" content="#161210" />
-  <link rel="canonical" href="https://harishwarsagar.com/" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harishwar Sagar — Revenue Operations & GTM Engineer</title>
+<meta name="description" content="Harishwar Sagar — Revenue Operations & GTM engineer. Scaled daily revenue ~10× at ~50% gross margins. Runs the strategy, builds the systems.">
+<meta name="author" content="Harishwar Sagar">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Harishwar Sagar — Revenue Operations & GTM Engineer">
+<meta property="og:description" content="Runs the strategy. Builds the systems. Scaled a venture ~10× on daily revenue at ~50% gross margins.">
+<meta property="og:url" content="https://harishwarsagar.com">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#FBF6ED">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23FF4D00'/%3E%3Ctext x='32' y='43' font-family='Arial Black,sans-serif' font-size='28' font-weight='900' fill='%23FBF6ED' text-anchor='middle'%3EHS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Fraunces:ital,opsz,wght@1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ════════════════════════════════════════════════════════════
+   HARISHWAR SAGAR · V2 — VIBRANT EDITORIAL / KINETIC
+   cream paper · ink · flame → rose → amber
+   ════════════════════════════════════════════════════════════ */
+:root{
+  --bg:#FBF6ED;
+  --bg-2:#F5EDDD;
+  --card:#FFFDF8;
+  --ink:#16110A;
+  --ink-2:#5D5546;
+  --ink-3:#998F7B;
+  --line:rgba(22,17,10,.14);
+  --line-2:rgba(22,17,10,.08);
+  --flame:#FF4D00;
+  --ember:#E03E00;
+  --rose:#F43F5E;
+  --amber:#FFB200;
+  --grad:linear-gradient(92deg,#FF4D00 0%,#F43F5E 52%,#FFB200 115%);
+  --tint:rgba(255,77,0,.07);
+  --disp:"Syne",sans-serif;
+  --serif:"Fraunces",Georgia,serif;
+  --sans:"Inter",-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",Consolas,monospace;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --bounce:cubic-bezier(.34,1.56,.64,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{
+  background:var(--bg);color:var(--ink);
+  font-family:var(--sans);font-size:16.5px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden;
+}
+::selection{background:var(--flame);color:#FBF6ED}
+::-webkit-scrollbar{width:11px}
+::-webkit-scrollbar-track{background:var(--bg-2)}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--flame),var(--amber));border-radius:8px;border:2px solid var(--bg-2)}
+a{color:inherit;text-decoration:none}
+button{font:inherit;border:none;background:none;cursor:pointer}
+svg{display:block}
+.wrap{max-width:1280px;margin:0 auto;padding:0 clamp(20px,4vw,56px)}
 
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Harishwar Sagar — Revenue Operations &amp; GTM" />
-  <meta property="og:description" content="Revenue Operations &amp; GTM with a builder's edge. I run the revenue strategy and build the systems that scale it." />
-  <meta property="og:url" content="https://harishwarsagar.com/" />
-  <meta property="og:image" content="assets/harishwar.png" />
-  <meta name="twitter:card" content="summary_large_image" />
+/* grain */
+body::after{
+  content:"";position:fixed;inset:-50%;pointer-events:none;z-index:3;opacity:.4;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.04'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grain 9s steps(10) infinite;
+}
+@keyframes grain{
+  0%,100%{transform:translate(0,0)}10%{transform:translate(-3%,-2%)}30%{transform:translate(2%,3%)}
+  50%{transform:translate(-2%,2%)}70%{transform:translate(3%,-3%)}90%{transform:translate(-3%,3%)}
+}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+/* ─────────── PRELOADER ─────────── */
+#loader{
+  position:fixed;inset:0;z-index:1000;background:var(--ink);
+  display:flex;align-items:center;justify-content:center;
+  transition:transform .8s cubic-bezier(.76,0,.24,1);
+}
+#loader.done{transform:translateY(-101%)}
+.loader-inner{overflow:hidden}
+.loader-name{
+  font-family:var(--disp);font-weight:800;text-transform:uppercase;
+  font-size:clamp(1.15rem,3.8vw,2.5rem);letter-spacing:.02em;color:var(--bg);
+  display:flex;gap:.04em;white-space:nowrap;
+}
+.loader-name span{display:inline-block;transform:translateY(120%);animation:lup .7s var(--ease) forwards;animation-delay:calc(var(--i)*.045s)}
+.loader-name .fl{color:var(--flame)}
+@keyframes lup{to{transform:translateY(0)}}
+noscript .ns-hide{display:none}
 
-  <link rel="stylesheet" href="css/styles.css" />
-  <noscript><style>.reveal{opacity:1 !important;transform:none !important;}</style></noscript>
+/* ─────────── CURSOR GLOW ─────────── */
+#glow{
+  position:fixed;width:420px;height:420px;border-radius:50%;pointer-events:none;z-index:0;
+  background:radial-gradient(circle,rgba(255,77,0,.16),rgba(244,63,94,.07) 45%,transparent 70%);
+  transform:translate(-50%,-50%);left:-500px;top:-500px;
+}
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Harishwar Sagar",
-    "jobTitle": "Revenue Operations & GTM",
-    "address": { "@type": "PostalAddress", "addressLocality": "Bangalore", "addressCountry": "India" },
-    "email": "mailto:SagarHarishwar@gmail.com",
-    "url": "https://harishwarsagar.com/",
-    "sameAs": ["https://linkedin.com/in/harishwarsagar"]
-  }
-  </script>
+/* ─────────── PROGRESS ─────────── */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--grad);z-index:300}
+
+/* ─────────── HEADER ─────────── */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  transition:background .4s,box-shadow .4s,transform .45s var(--ease);
+}
+header.scrolled{background:rgba(251,246,237,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--line-2)}
+header.hide{transform:translateY(-100%)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{font-family:var(--disp);font-weight:800;font-size:1.25rem;letter-spacing:.02em;display:flex;align-items:center;gap:2px}
+.brand .star{display:inline-block;color:var(--flame);animation:spin 7s linear infinite;font-size:1.05em}
+@keyframes spin{to{transform:rotate(360deg)}}
+.nav-mid{display:flex;gap:clamp(16px,2.4vw,34px);list-style:none}
+.nav-mid a{
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2);
+  position:relative;padding:6px 2px;transition:color .3s;
+}
+.nav-mid a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--grad);transition:width .35s var(--ease);border-radius:2px}
+.nav-mid a:hover{color:var(--ink)}
+.nav-mid a:hover::after{width:100%}
+.nav-right{display:flex;align-items:center;gap:18px}
+.clock{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;color:var(--ink-3);text-transform:uppercase}
+.btn-nav{
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--bg);background:var(--ink);padding:11px 20px;border-radius:999px;white-space:nowrap;
+  transition:background .35s,transform .35s var(--bounce);display:inline-block;
+}
+.btn-nav:hover{background:var(--flame);transform:scale(1.05)}
+
+/* ─────────── HERO ─────────── */
+.hero{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:stretch;position:relative;padding-top:108px;overflow:hidden}
+.hero>.wrap{width:100%}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;opacity:.55;will-change:transform}
+.blob-1{width:560px;height:560px;right:-140px;top:-80px;background:radial-gradient(circle,#FFB68A,#FF7847 60%,transparent 72%);animation:drift1 22s ease-in-out infinite}
+.blob-2{width:480px;height:480px;left:-160px;bottom:-40px;background:radial-gradient(circle,#FFD9A0,#FFB200 55%,transparent 72%);animation:drift2 26s ease-in-out infinite}
+.blob-3{width:380px;height:380px;left:34%;top:8%;background:radial-gradient(circle,#FFC2CD,#F43F5E 58%,transparent 75%);opacity:.32;animation:drift3 19s ease-in-out infinite}
+@keyframes drift1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-90px,70px) scale(1.12)}}
+@keyframes drift2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(110px,-60px) scale(.92)}}
+@keyframes drift3{0%,100%{transform:translate(0,0) rotate(0)}50%{transform:translate(70px,90px) rotate(40deg)}}
+
+.hero-status{
+  display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;row-gap:4px;
+  max-width:100%;line-height:1.7;
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);
+  border:1px solid var(--line);border-radius:24px;padding:9px 18px;background:rgba(255,253,248,.6);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);margin-bottom:clamp(26px,4vh,46px);
+}
+.hero-status .pulse{flex:0 0 auto}
+.hero-status .pulse{width:8px;height:8px;border-radius:50%;background:#16A34A;box-shadow:0 0 0 0 rgba(22,163,74,.5);animation:beat 1.8s infinite}
+@keyframes beat{70%{box-shadow:0 0 0 11px rgba(22,163,74,0)}100%{box-shadow:0 0 0 0 rgba(22,163,74,0)}}
+
+.name{position:relative;z-index:2;container-type:inline-size}
+.name .line{
+  display:flex;overflow:hidden;white-space:nowrap;
+  padding-bottom:.06em;margin-bottom:-.04em;
+  font-size:min(7.5vw,6.8rem);
+}
+@supports (font-size:1cqi){
+  .name .line{font-size:min(9.2cqi,7.2rem)}
+}
+.name .lt{
+  display:inline-block;flex:0 0 auto;
+  font-family:var(--disp);font-weight:800;text-transform:uppercase;
+  font-size:inherit;line-height:.98;letter-spacing:-.02em;
+  transform:translateY(115%) rotate(5deg);
+}
+body.loaded .name .lt{animation:rise .85s var(--ease) forwards;animation-delay:calc(.55s + var(--i)*.042s)}
+@keyframes rise{to{transform:translateY(0) rotate(0)}}
+.name .l2 .lt{
+  background:var(--grad);background-size:200% 100%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+body.loaded .name .l2 .lt{animation:rise .85s var(--ease) forwards,shimmer 7s ease-in-out 2s infinite;animation-delay:calc(.55s + var(--i)*.042s),2.2s}
+@keyframes shimmer{0%,100%{background-position:0% 0}50%{background-position:100% 0}}
+.name .star-big{
+  display:inline-block;font-family:var(--disp);font-weight:800;color:var(--flame);
+  font-size:.38em;margin-left:.18em;align-self:flex-start;margin-top:.14em;
+  animation:spin 9s linear infinite;transform-origin:center;
+}
+
+.hero-row{
+  display:flex;justify-content:space-between;align-items:flex-end;gap:36px;
+  margin-top:clamp(30px,5vh,54px);position:relative;z-index:2;
+}
+.hero-title{
+  font-family:var(--serif);font-style:italic;font-weight:300;
+  font-size:clamp(1.2rem,2.1vw,1.75rem);line-height:1.3;max-width:24ch;color:var(--ink);
+}
+.hero-title b{font-weight:400;color:var(--flame)}
+.hero-bio{max-width:400px;color:var(--ink-2);font-size:.98rem}
+.hero-bio b{color:var(--ink);font-weight:600}
+.hero-bio .loc{
+  display:block;margin-top:14px;font-family:var(--mono);font-size:.68rem;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);
+}
+.hero-ctas{display:flex;gap:16px;margin-top:clamp(30px,4.5vh,48px);position:relative;z-index:2;flex-wrap:wrap}
+
+.btn{
+  display:inline-flex;align-items:center;gap:12px;
+  font-weight:600;font-size:.94rem;padding:15px 28px;border-radius:999px;
+  position:relative;overflow:hidden;transition:transform .4s var(--bounce),box-shadow .4s,color .35s,border-color .35s;
+  will-change:transform;
+}
+.btn-fire{background:var(--grad);background-size:150% 100%;color:#FFF8EF;box-shadow:0 14px 34px -12px rgba(255,77,0,.55)}
+.btn-fire::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);
+  transform:translateX(-110%);transition:transform .7s var(--ease);
+}
+.btn-fire:hover{transform:scale(1.045);box-shadow:0 20px 44px -14px rgba(255,77,0,.65)}
+.btn-fire:hover::before{transform:translateX(110%)}
+.btn-line{border:1.5px solid var(--ink);color:var(--ink);background:transparent}
+.btn-line:hover{background:var(--ink);color:var(--bg);transform:scale(1.045)}
+.btn .ico{transition:transform .35s var(--ease)}
+.btn:hover .ico-up{transform:translate(3px,-3px)}
+.btn:hover .ico-dn{transform:translateY(3px)}
+
+/* ─────────── TICKER (outlined roles, bottom of hero) ─────────── */
+.ticker{overflow:hidden;border-top:1px solid var(--line-2);margin-top:clamp(40px,7vh,80px);padding:22px 0;position:relative;z-index:2}
+.ticker-track{display:flex;width:max-content;animation:mqL 30s linear infinite}
+.ticker span{
+  font-family:var(--disp);font-weight:800;text-transform:uppercase;white-space:nowrap;
+  font-size:clamp(1.35rem,2.7vw,2.25rem);letter-spacing:.01em;padding-right:.6em;
+  color:transparent;-webkit-text-stroke:1.2px rgba(22,17,10,.34);
+}
+.ticker span i{font-style:normal;color:var(--flame);-webkit-text-stroke:0;padding:0 .35em}
+@keyframes mqL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes mqR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+
+/* ─────────── LOGO BELT ─────────── */
+.belt{padding:clamp(56px,9vh,96px) 0 clamp(40px,6vh,64px);position:relative}
+.belt-label{
+  text-align:center;font-family:var(--mono);font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--ink-3);margin-bottom:38px;display:flex;align-items:center;gap:22px;justify-content:center;
+}
+.belt-label::before,.belt-label::after{content:"";height:1px;width:min(150px,18vw);background:var(--line)}
+.belt-row{overflow:hidden;padding:14px 0;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);
+}
+.belt-track{display:flex;gap:18px;width:max-content;animation:mqL 38s linear infinite;padding:6px 0}
+.belt-row.rev .belt-track{animation:mqR 42s linear infinite}
+.belt-row:hover .belt-track{animation-play-state:paused}
+.chipL{
+  display:flex;align-items:center;gap:12px;white-space:nowrap;
+  background:var(--card);border:1px solid var(--line-2);border-radius:18px;
+  padding:15px 24px;font-weight:600;font-size:.95rem;color:var(--ink);
+  box-shadow:0 6px 18px -10px rgba(22,17,10,.14);
+  transition:transform .35s var(--bounce),box-shadow .35s,border-color .35s;
+}
+.chipL:hover{transform:translateY(-5px) rotate(-1.2deg);box-shadow:0 16px 30px -12px rgba(22,17,10,.22);border-color:rgba(255,77,0,.35)}
+.chipL svg{width:21px;height:21px;flex:0 0 auto}
+.chipL .dot{width:11px;height:11px;border-radius:50%;flex:0 0 auto}
+
+/* ─────────── FIRE STRIP ─────────── */
+.strip{background:var(--grad);transform:rotate(-1.4deg) scale(1.03);padding:16px 0;overflow:hidden;margin:clamp(40px,7vh,72px) 0;box-shadow:0 18px 44px -22px rgba(255,77,0,.5)}
+.strip-track{display:flex;width:max-content;animation:mqR 26s linear infinite}
+.strip span{
+  font-family:var(--disp);font-weight:700;text-transform:uppercase;white-space:nowrap;
+  font-size:clamp(.85rem,1.3vw,1.05rem);letter-spacing:.06em;color:#FFF6EA;padding-right:.5em;
+}
+.strip span i{font-style:normal;padding:0 .5em;opacity:.75}
+
+/* ─────────── SECTION SCAFFOLD ─────────── */
+section{padding:clamp(64px,10vh,118px) 0;position:relative}
+.kicker{
+  display:inline-flex;align-items:center;gap:12px;
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;color:var(--flame);
+  margin-bottom:20px;
+}
+.kicker::before{content:"";width:34px;height:2px;background:var(--grad);border-radius:2px}
+.h2{
+  font-family:var(--disp);font-weight:800;text-transform:uppercase;letter-spacing:-.015em;
+  font-size:clamp(1.85rem,4.2vw,3.3rem);line-height:1.05;
+}
+.h2 em{
+  font-family:var(--serif);font-style:italic;font-weight:300;text-transform:none;letter-spacing:0;
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+  padding-right:.08em;
+}
+.sec-head{margin-bottom:clamp(40px,7vh,72px);display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.sec-note{max-width:340px;color:var(--ink-2);font-size:.95rem;padding-bottom:8px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv1{transition-delay:.08s}.rv2{transition-delay:.16s}.rv3{transition-delay:.24s}
+
+/* ─────────── 01 · NUMBERS ─────────── */
+.num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,1.8vw,24px)}
+.num-card{
+  background:var(--card);border:1px solid var(--line-2);border-radius:26px;
+  padding:clamp(26px,2.8vw,40px) clamp(22px,2.4vw,34px);position:relative;overflow:hidden;
+  box-shadow:0 10px 30px -18px rgba(22,17,10,.18);
+  transition:box-shadow .4s;transform-style:preserve-3d;will-change:transform;
+}
+.num-card:hover{box-shadow:0 26px 50px -20px rgba(255,77,0,.3)}
+.num-card.in{transition:box-shadow .4s}
+.num-card::before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:var(--grad);opacity:0;transition:opacity .4s}
+.num-card:hover::before{opacity:1}
+.num-val{
+  font-family:var(--disp);font-weight:800;line-height:1;letter-spacing:-.02em;
+  font-size:clamp(2.3rem,3.7vw,3.5rem);display:flex;align-items:baseline;
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.num-val .sm{font-size:.5em}
+.num-lab{margin-top:14px;font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);line-height:1.9}
+.num-card .wm{
+  position:absolute;right:-12px;bottom:-26px;font-family:var(--disp);font-weight:800;
+  font-size:6.5rem;color:var(--ink);opacity:.04;pointer-events:none;line-height:1;
+}
+
+/* ─────────── 02 · ENGINES ─────────── */
+.engines{position:relative}
+.eng-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:clamp(18px,2.6vw,36px);align-items:stretch}
+.eng-x{
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-style:italic;font-weight:300;
+  font-size:clamp(2.3rem,4.4vw,4rem);
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.eng-card{
+  background:var(--card);border:1px solid var(--line-2);border-radius:30px;
+  padding:clamp(30px,3.4vw,48px);position:relative;overflow:hidden;
+  box-shadow:0 12px 34px -20px rgba(22,17,10,.2);
+  transition:transform .45s var(--ease),box-shadow .45s;
+}
+.eng-card:hover{transform:translateY(-7px);box-shadow:0 30px 56px -24px rgba(22,17,10,.3)}
+.eng-card::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:var(--grad)}
+.eng-tag{
+  display:inline-block;font-family:var(--mono);font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--flame);background:var(--tint);border:1px solid rgba(255,77,0,.25);
+  border-radius:999px;padding:7px 15px;margin-bottom:22px;
+}
+.eng-card h3{font-family:var(--disp);font-weight:700;text-transform:uppercase;font-size:clamp(1.25rem,1.9vw,1.7rem);letter-spacing:-.01em;line-height:1.15}
+.eng-card .d{margin-top:12px;color:var(--ink-2);font-size:.95rem;max-width:42ch}
+.eng-list{list-style:none;margin-top:26px}
+.eng-list li{
+  display:flex;gap:14px;align-items:baseline;padding:13px 0;border-top:1px solid var(--line-2);
+  font-size:.95rem;color:var(--ink-2);transition:padding-left .3s var(--ease),color .3s;
+}
+.eng-list li:hover{padding-left:10px;color:var(--ink)}
+.eng-list li::before{content:"→";color:var(--flame);font-family:var(--mono);font-size:.82rem;flex:0 0 auto}
+.eng-list b{color:var(--ink);font-weight:600}
+.eng-quote{
+  margin-top:clamp(44px,7vh,72px);text-align:center;
+  font-family:var(--serif);font-style:italic;font-weight:300;
+  font-size:clamp(1.35rem,2.6vw,2.1rem);line-height:1.4;max-width:36ch;margin-left:auto;margin-right:auto;
+}
+.eng-quote b{font-weight:400;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ─────────── 03 · EXPERIENCE (sticky stack) ─────────── */
+.xp-stack{display:flex;flex-direction:column;gap:clamp(20px,3vh,30px)}
+.xp-card{
+  position:sticky;background:var(--card);border:1px solid var(--line);border-radius:32px;
+  padding:clamp(28px,3.6vw,52px);box-shadow:0 -8px 40px -20px rgba(22,17,10,.22);
+  display:grid;grid-template-columns:1.1fr 1.7fr;gap:clamp(24px,3.5vw,56px);
+  overflow:hidden;will-change:transform;
+}
+.xp-card .ghost{
+  position:absolute;right:6px;top:-24px;font-family:var(--disp);font-weight:800;line-height:1;
+  font-size:clamp(5.5rem,11vw,9.5rem);color:var(--ink);opacity:.045;pointer-events:none;user-select:none;
+}
+.xp-role{font-family:var(--disp);font-weight:700;text-transform:uppercase;letter-spacing:-.01em;font-size:clamp(1.35rem,2.2vw,1.95rem);line-height:1.1}
+.xp-org{margin-top:12px;color:var(--ink-2);font-size:.96rem}
+.xp-org b{color:var(--ink);font-weight:600}
+.xp-date{
+  display:inline-block;margin-top:18px;font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--ink-2);border:1px solid var(--line);border-radius:999px;padding:8px 16px;
+}
+.xp-now{
+  display:inline-flex;align-items:center;gap:8px;margin-top:12px;margin-left:8px;
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;
+  color:#fff;background:var(--grad);border-radius:999px;padding:9px 16px;
+}
+.xp-now::before{content:"";width:6px;height:6px;border-radius:50%;background:#fff;animation:beat 1.8s infinite}
+.xp-pts{list-style:none}
+.xp-pts li{display:flex;gap:14px;align-items:baseline;padding:11px 0;color:var(--ink-2);font-size:.96rem}
+.xp-pts li::before{content:"✦";color:var(--flame);font-size:.7rem;flex:0 0 auto}
+.xp-pts b{color:var(--ink);font-weight:600}
+.xp-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.tag{
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;
+  background:var(--tint);color:var(--ember);border:1px solid rgba(255,77,0,.22);
+  border-radius:999px;padding:7px 14px;
+}
+
+/* ─────────── 04 · EDUCATION ─────────── */
+.edu{background:var(--bg-2);border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2)}
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.4vw,28px)}
+.edu-card{
+  background:var(--card);border:1px solid var(--line-2);border-radius:26px;padding:clamp(26px,3vw,40px);
+  transition:transform .4s var(--bounce),box-shadow .4s;box-shadow:0 8px 26px -18px rgba(22,17,10,.16);
+}
+.edu-card:hover{transform:translateY(-6px) rotate(-.5deg);box-shadow:0 24px 44px -22px rgba(255,77,0,.28)}
+.edu-kind{font-family:var(--mono);font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--flame);display:block;margin-bottom:14px}
+.edu-card h3{font-family:var(--disp);font-weight:700;font-size:1.18rem;line-height:1.3;letter-spacing:-.01em}
+.edu-card p{margin-top:8px;color:var(--ink-2);font-size:.92rem}
+.cert-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(24px,4vh,38px)}
+.cert{
+  display:inline-flex;align-items:center;gap:10px;background:var(--card);
+  border:1px solid var(--line-2);border-radius:999px;padding:12px 22px;font-size:.88rem;font-weight:500;color:var(--ink-2);
+  transition:transform .35s var(--bounce),border-color .3s,color .3s;
+}
+.cert:hover{transform:translateY(-3px);border-color:rgba(255,77,0,.4);color:var(--ink)}
+.cert::before{content:"✦";color:var(--flame);font-size:.75rem}
+
+/* ─────────── 05 · CONTACT ─────────── */
+.contact{text-align:center;overflow:hidden}
+.talk{
+  font-family:var(--disp);font-weight:800;text-transform:uppercase;line-height:.95;letter-spacing:-.025em;
+  font-size:clamp(2.2rem,7.3vw,6.6rem);white-space:nowrap;
+  color:transparent;-webkit-text-stroke:1.2px rgba(22,17,10,.4);
+  transition:all .5s var(--ease);cursor:default;display:inline-block;
+}
+.talk:hover{
+  -webkit-text-stroke:0;
+  background:var(--grad);background-size:200% 100%;
+  -webkit-background-clip:text;background-clip:text;
+  animation:shimmer 3.5s ease-in-out infinite;
+}
+.contact-sub{margin:30px auto 0;max-width:54ch;color:var(--ink-2);font-size:1.04rem}
+.contact-sub b{color:var(--ink)}
+.contact-ctas{display:flex;justify-content:center;gap:16px;margin-top:44px;flex-wrap:wrap}
+.contact-links{margin-top:clamp(44px,7vh,68px);display:flex;justify-content:center;gap:clamp(20px,4vw,48px);flex-wrap:wrap}
+.contact-links a{
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2);
+  display:inline-flex;gap:9px;align-items:center;position:relative;padding:6px 0;transition:color .3s;
+}
+.contact-links a::after{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:0;background:var(--grad);transition:width .35s var(--ease)}
+.contact-links a:hover{color:var(--ink)}
+.contact-links a:hover::after{width:100%}
+.contact-links .s{color:var(--flame)}
+
+/* ─────────── FOOTER ─────────── */
+footer{border-top:1px solid var(--line-2);padding:32px 0}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.foot .sig{font-family:var(--serif);font-style:italic;text-transform:none;letter-spacing:0;font-size:.95rem;color:var(--ink-2)}
+.foot .sig b{font-weight:400;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.to-top{font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);transition:color .3s}
+.to-top:hover{color:var(--flame)}
+
+/* ─────────── RESPONSIVE ─────────── */
+@media(max-width:1020px){
+  .num-grid{grid-template-columns:1fr 1fr}
+  .clock{display:none}
+}
+@media(max-width:860px){
+  .hero{min-height:0;justify-content:flex-start;padding-bottom:0}
+  .eng-grid{grid-template-columns:1fr}
+  .eng-x{padding:4px 0}
+  .xp-card{grid-template-columns:1fr;gap:20px;position:static;top:auto!important;transform:none!important;opacity:1!important}
+  .hero-row{flex-direction:column;align-items:flex-start;gap:24px}
+  .nav-mid{display:none}
+}
+@media(max-width:600px){
+  body{font-size:15.5px}
+  /* deterministic name size on phones — CSS wins over JS, no font race */
+  .name .line{font-size:min(8.2vw,3.1rem)!important}
+  .name .line{font-size:min(9.2cqi,3.1rem)!important}
+  .talk{font-size:min(8.6vw,2.9rem)!important}
+  .nav{height:64px}
+  .brand{font-size:1.1rem}
+  .btn-nav{padding:9px 15px;font-size:.62rem}
+  .hero{padding-top:88px}
+  .hero-status{font-size:.58rem;letter-spacing:.12em;padding:8px 13px;gap:8px}
+  .hero-title{font-size:1.22rem}
+  .hero-bio{font-size:.92rem}
+  .hero-row{margin-top:26px;gap:18px}
+  .hero-ctas{width:100%;margin-top:28px;gap:11px}
+  .btn{width:100%;justify-content:center;padding:14px 22px;font-size:.92rem}
+  .blob{filter:blur(60px)}
+  .blob-1{width:330px;height:330px;right:-110px;top:-60px}
+  .blob-2{width:300px;height:300px;left:-110px}
+  .blob-3{width:230px;height:230px}
+  .ticker{margin-top:40px;padding:14px 0}
+  .belt{padding:44px 0 36px}
+  .belt-label{margin-bottom:24px;letter-spacing:.22em}
+  .chipL{padding:11px 17px;font-size:.85rem;border-radius:14px;gap:9px}
+  .chipL svg{width:17px;height:17px}
+  .strip{margin:32px 0;padding:12px 0}
+  .num-grid{grid-template-columns:1fr;gap:12px}
+  .num-card{border-radius:20px}
+  .sec-head{margin-bottom:34px}
+  .sec-note{font-size:.9rem}
+  .edu-grid{grid-template-columns:1fr;gap:12px}
+  .edu-card{border-radius:20px}
+  .eng-card{border-radius:22px}
+  .xp-card{padding:22px;border-radius:20px}
+  .xp-role{font-size:1.22rem}
+  .xp-pts li{font-size:.92rem;padding:9px 0}
+  .ghost{display:none}
+  .contact-sub{font-size:.95rem;margin-top:22px}
+  .contact-ctas{margin-top:32px;gap:11px}
+  .contact-links{gap:18px;margin-top:38px}
+  .foot{flex-direction:column;text-align:center;gap:10px;justify-content:center}
+}
+@media(max-width:390px){
+  .hero-status{font-size:.52rem}
+  .hero-title{font-size:1.1rem}
+  .wrap{padding:0 16px}
+}
+
+/* ─────────── BROWSER FALLBACKS ─────────── */
+@supports not (-webkit-background-clip:text){
+  .name .l2 .lt,.num-val,.eng-x,.h2 em,.eng-quote b,.foot .sig b{background:none;color:var(--flame)}
+  .talk:hover{background:none;color:var(--flame);animation:none}
+}
+@supports not (-webkit-text-stroke:1px #000){
+  .ticker span{color:rgba(22,17,10,.2)}
+  .talk{color:var(--ink)}
+}
+
+/* ─────────── REDUCED MOTION ─────────── */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none}
+  .name .lt{transform:none}
+  #loader{display:none}
+  #glow{display:none}
+  .ticker-track,.belt-track,.strip-track{animation:none}
+}
+</style>
 </head>
 <body>
-  <a class="skip-link" href="#hero">Skip to content</a>
-
-  <!-- ===================== NAV ===================== -->
-  <header class="nav" id="nav">
-    <div class="nav__inner">
-      <a href="#hero" class="nav__brand" aria-label="Harishwar Sagar home">Harishwar Sagar<span>.</span></a>
-      <nav class="nav__links" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#results">Results</a>
-        <a href="#experience">Experience</a>
-        <a href="#stack">Stack</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a href="https://cal.com/Harishwar" target="_blank" rel="noopener" class="nav__cta">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>
-        Book a call
-      </a>
-      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+<div id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <div class="loader-name">
+      <span style="--i:0">H</span><span style="--i:1">A</span><span style="--i:2">R</span><span style="--i:3">I</span><span style="--i:4">S</span><span style="--i:5">H</span><span style="--i:6">W</span><span style="--i:7">A</span><span style="--i:8">R</span><span style="--i:9">&nbsp;</span><span class="fl" style="--i:10">S</span><span class="fl" style="--i:11">A</span><span class="fl" style="--i:12">G</span><span class="fl" style="--i:13">A</span><span class="fl" style="--i:14">R</span>
     </div>
-    <nav class="nav__mobile" id="navMobile" aria-label="Mobile">
-      <a href="#about">About</a>
-      <a href="#results">Results</a>
-      <a href="#experience">Experience</a>
-      <a href="#stack">Stack</a>
-      <a href="#contact">Contact</a>
-      <a href="https://cal.com/Harishwar" target="_blank" rel="noopener" class="btn btn--accent">Book a call</a>
-    </nav>
-  </header>
+  </div>
+</div>
+<noscript><style>#loader{display:none}.name .lt{transform:none}.rv{opacity:1;transform:none}</style></noscript>
+<div id="glow" aria-hidden="true"></div>
+<div id="progress" aria-hidden="true"></div>
 
-  <main>
-    <!-- ===================== HERO ===================== -->
-    <section class="hero section" id="hero" data-screen-label="Hero">
-      <div class="hero__arc a1"></div>
-      <div class="hero__arc a2"></div>
-      <div class="container">
-        <span class="hero__avail reveal"><i></i> Open to remote roles · Full US EST / PST overlap</span>
-
-        <div class="photo reveal">
-          <img src="assets/harishwar.png" alt="Portrait of Harishwar Sagar" width="770" height="847" loading="eager" />
-          <span class="photo__badge"><i></i> Bangalore, India</span>
-        </div>
-
-        <h1 class="hero__name reveal">Harishwar Sagar</h1>
-        <p class="hero__tagline reveal">Revenue Operations &amp; GTM — <em>with a builder's edge</em></p>
-        <p class="hero__body reveal">I run the revenue strategy and build the systems that scale it. From pricing and forecasting to demand generation and automation — engineering discipline, applied to the number.</p>
-        <div class="hero__actions reveal">
-          <a href="https://cal.com/Harishwar" target="_blank" rel="noopener" class="btn btn--accent">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>
-            Book a call
-          </a>
-          <a href="content/Resume.pdf" target="_blank" rel="noopener" class="btn btn--ghost">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"></path></svg>
-            Download résumé
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== METRICS ===================== -->
-    <section class="section section--tight" id="metrics" aria-label="Key results">
-      <div class="container">
-        <div class="metrics reveal">
-          <div class="metric">
-            <span class="metric__value" data-count="10" data-prefix="~" data-suffix="×">~0×</span>
-            <span class="metric__label">Revenue Growth</span>
-          </div>
-          <div class="metric">
-            <span class="metric__value" data-count="50" data-suffix="%">0%</span>
-            <span class="metric__label">Gross Margin</span>
-          </div>
-          <div class="metric">
-            <span class="metric__value" data-count="60" data-prefix="−" data-suffix="%">−0%</span>
-            <span class="metric__label">Admin Reduction</span>
-          </div>
-          <div class="metric">
-            <span class="metric__value" data-count="33" data-suffix="%">0%</span>
-            <span class="metric__label">Close Rate</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== ABOUT ===================== -->
-    <section class="section about" id="about" data-screen-label="About">
-      <div class="container">
-        <div class="h-head reveal">
-          <span class="eyebrow">The throughline</span>
-          <h2 class="h-sec"><span class="solid">From DevOps</span><span class="ghost">to revenue</span></h2>
-        </div>
-        <div class="about__grid">
-          <div class="about__lead reveal">
-            <p>I started in engineering — building, shipping and operating systems at scale. At <strong>Oracle</strong> as a DevOps Engineer, and before that as a Software Engineer at <strong>Checkpoint Systems</strong>, I learned how reliable systems are designed: instrumented, automated, and accountable to real numbers.</p>
-            <p>Then I moved closer to the money. I took ownership of <strong>revenue</strong> — not just the tooling around it, but the strategy, the pricing, the pipeline and the P&amp;L. I ran the full GTM motion across paid media, SEO, marketplaces and conversion funnels, and watched what actually moved the number.</p>
-          </div>
-          <div class="about__body reveal">
-            <p>That combination is the whole point. Most revenue leaders can read a dashboard; few can <em>build</em> the dashboard, wire the automation behind it, and then make the commercial call. I do both.</p>
-            <p>My philosophy is a <strong>Revenue OS</strong>: treat go-to-market like a system. Every lead source, every pricing rule, every forecast and every manual task is a component that can be measured, automated and improved — so the business runs on signal, not guesswork, and growth compounds without the headcount.</p>
-            <p class="about__line"><span>Engineer</span><span>Built systems</span><span>Owned revenue</span><span>Built revenue systems</span><strong>RevOps &amp; GTM</strong></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== RESULTS ===================== -->
-    <section class="section" id="results" data-screen-label="Results">
-      <div class="container">
-        <div class="h-head reveal">
-          <span class="eyebrow">Outcomes, not activity</span>
-          <h2 class="h-sec"><span class="solid">Selected</span><span class="ghost">results</span></h2>
-        </div>
-        <div class="results">
-          <article class="result-card reveal">
-            <div class="result-card__head">
-              <h3>Revenue OS</h3>
-              <span class="result-card__arrow" aria-hidden="true">↗</span>
-            </div>
-            <p>Built automation infrastructure across n8n, Zapier and webhooks — connecting operations, inventory and reporting into a single revenue system.</p>
-            <div class="result-card__metric"><strong>−60%</strong><span>Manual Admin</span></div>
-          </article>
-          <article class="result-card reveal">
-            <div class="result-card__head">
-              <h3>Snack Theory Growth</h3>
-              <span class="result-card__arrow" aria-hidden="true">↗</span>
-            </div>
-            <p>Owned the complete revenue engine across paid media, SEO, marketplaces and conversion funnels — end to end.</p>
-            <div class="result-card__metric"><strong>~10×</strong><span>Revenue Growth</span></div>
-          </article>
-          <article class="result-card reveal">
-            <div class="result-card__head">
-              <h3>Catering Growth Engine</h3>
-              <span class="result-card__arrow" aria-hidden="true">↗</span>
-            </div>
-            <p>Built and scaled catering businesses through paid acquisition, conversion optimisation, pricing strategy and operational systems.</p>
-            <div class="result-card__metric"><strong>50%</strong><span>Gross Margin</span></div>
-          </article>
-          <article class="result-card reveal">
-            <div class="result-card__head">
-              <h3>Enterprise Sales &amp; Growth</h3>
-              <span class="result-card__arrow" aria-hidden="true">↗</span>
-            </div>
-            <p>Built recurring corporate relationships through consultative sales, pricing strategy and revenue operations.</p>
-            <div class="result-card__metric"><strong>33%</strong><span>Close Rate</span></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== EXPERIENCE ===================== -->
-    <section class="section" id="experience" data-screen-label="Experience">
-      <div class="container">
-        <div class="h-head reveal">
-          <span class="eyebrow">The path</span>
-          <h2 class="h-sec"><span class="solid">Building</span><span class="ghost">revenue systems</span></h2>
-        </div>
-        <ol class="timeline">
-          <li class="timeline__item reveal">
-            <div class="timeline__marker" aria-hidden="true"></div>
-            <div class="timeline__card">
-              <div class="timeline__top">
-                <h3>GTM &amp; Revenue Operations Lead</h3>
-                <span class="timeline__meta">Snack Theory · Present</span>
-              </div>
-              <p>Own the end-to-end revenue engine — demand generation, pricing, forecasting and pipeline. Built a Revenue OS connecting paid acquisition, marketplaces, inventory and reporting through automation, driving roughly 10× revenue growth.</p>
-            </div>
-          </li>
-          <li class="timeline__item reveal">
-            <div class="timeline__marker" aria-hidden="true"></div>
-            <div class="timeline__card">
-              <div class="timeline__top">
-                <h3>Revenue &amp; Growth Manager</h3>
-                <span class="timeline__meta">The Good Chef</span>
-              </div>
-              <p>Scaled a catering and food-service business through paid acquisition, conversion optimisation and disciplined pricing strategy. Held 50% gross margin while building the operational systems that let growth compound.</p>
-            </div>
-          </li>
-          <li class="timeline__item reveal">
-            <div class="timeline__marker" aria-hidden="true"></div>
-            <div class="timeline__card">
-              <div class="timeline__top">
-                <h3>DevOps Engineer</h3>
-                <span class="timeline__meta">Oracle</span>
-              </div>
-              <p>Built and operated automated infrastructure and CI/CD pipelines at enterprise scale. Learned how reliable systems are instrumented, monitored and held accountable to measurable outcomes — the foundation for everything I now bring to revenue.</p>
-            </div>
-          </li>
-          <li class="timeline__item reveal">
-            <div class="timeline__marker" aria-hidden="true"></div>
-            <div class="timeline__card">
-              <div class="timeline__top">
-                <h3>Software Engineer</h3>
-                <span class="timeline__meta">Checkpoint Systems</span>
-              </div>
-              <p>Shipped production software and integrations across operational systems. The start of a systems-first mindset: design for scale, automate the repetitive, measure everything.</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ===================== REVENUE STACK ===================== -->
-    <section class="section" id="stack" data-screen-label="Stack">
-      <div class="container">
-        <div class="h-head reveal">
-          <span class="eyebrow">The toolkit</span>
-          <h2 class="h-sec"><span class="solid">Revenue</span><span class="ghost">stack</span></h2>
-        </div>
-        <div class="stack">
-          <div class="stack__group reveal">
-            <h3 class="stack__title">Revenue Operations</h3>
-            <ul class="stack__tags">
-              <li>Forecasting</li><li>P&amp;L Analysis</li><li>Pricing</li><li>Pipeline Management</li><li>Deal Desk</li>
-            </ul>
-          </div>
-          <div class="stack__group reveal">
-            <h3 class="stack__title">Go-To-Market</h3>
-            <ul class="stack__tags">
-              <li>Google Ads</li><li>Meta Ads</li><li>LinkedIn Ads</li><li>SEO</li><li>CRO</li>
-            </ul>
-          </div>
-          <div class="stack__group reveal">
-            <h3 class="stack__title">CRM</h3>
-            <ul class="stack__tags">
-              <li>HubSpot</li><li>Salesforce</li><li>Clay</li><li>Apollo</li><li>Sales Navigator</li>
-            </ul>
-          </div>
-          <div class="stack__group reveal">
-            <h3 class="stack__title">Automation &amp; AI</h3>
-            <ul class="stack__tags">
-              <li>n8n</li><li>Zapier</li><li>Python</li><li>SQL</li><li>GPT</li><li>Claude</li><li>Gemini</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== PRINCIPLES ===================== -->
-    <section class="section" id="principles" data-screen-label="Principles">
-      <div class="container">
-        <div class="h-head reveal">
-          <span class="eyebrow">How I operate</span>
-          <h2 class="h-sec"><span class="solid">Operating</span><span class="ghost">principles</span></h2>
-        </div>
-        <div class="principles">
-          <article class="principle reveal">
-            <span class="principle__num">01</span>
-            <span class="principle__tag">Perspective</span>
-            <h3>From DevOps to revenue</h3>
-            <p>The discipline that keeps systems reliable is the same discipline that makes revenue predictable. Instrument it, automate it, hold it accountable to the number.</p>
-          </article>
-          <article class="principle reveal">
-            <span class="principle__num">02</span>
-            <span class="principle__tag">Playbook</span>
-            <h3>Build the Revenue OS</h3>
-            <p>Treat go-to-market as a system. Map every lead source, pricing rule and manual task into components you can measure, automate and improve.</p>
-          </article>
-          <article class="principle reveal">
-            <span class="principle__num">03</span>
-            <span class="principle__tag">Edge</span>
-            <h3>The GTM-engineer advantage</h3>
-            <p>Read the dashboard, build the dashboard, wire the automation behind it — and still make the commercial call. Few people can do all four.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== CONTACT ===================== -->
-    <section class="section" id="contact" data-screen-label="Contact">
-      <div class="container">
-        <div class="h-head center reveal">
-          <span class="eyebrow eyebrow--center">Let's build the number</span>
-          <h2 class="h-sec"><span class="solid">Let's work</span><span class="ghost">together</span></h2>
-        </div>
-        <div class="contact reveal">
-          <div class="contact__info">
-            <p class="contact__avail">Open to remote roles — full US EST / PST overlap. Let's talk about what you're building.</p>
-            <ul class="contact__list">
-              <li><span>Email</span><a href="mailto:SagarHarishwar@gmail.com">SagarHarishwar@gmail.com</a></li>
-              <li><span>LinkedIn</span><a href="https://linkedin.com/in/harishwarsagar" target="_blank" rel="noopener">linkedin.com/in/harishwarsagar</a></li>
-              <li><span>Calendar</span><a href="https://cal.com/Harishwar" target="_blank" rel="noopener">cal.com/Harishwar</a></li>
-            </ul>
-          </div>
-          <form class="contact__form" id="contactForm" action="https://formspree.io/f/your-id" method="POST" novalidate>
-            <div class="field-row">
-              <div class="field">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name" required />
-              </div>
-              <div class="field">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="you@email.com" required />
-              </div>
-            </div>
-            <div class="field">
-              <label for="budget">Scope</label>
-              <select id="budget" name="budget">
-                <option value="" selected>Select…</option>
-                <option>Full-time role</option>
-                <option>Fractional / Advisory</option>
-                <option>Project engagement</option>
-                <option>Just exploring</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" placeholder="What are you building?" required></textarea>
-            </div>
-            <button type="submit" class="btn btn--accent btn--block">Send message</button>
-            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div>
-        <p class="footer__name">Harishwar Sagar</p>
-        <p class="footer__role">Revenue Operations &amp; GTM</p>
-      </div>
-      <nav class="footer__links" aria-label="Footer">
-        <a href="https://linkedin.com/in/harishwarsagar" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:SagarHarishwar@gmail.com">Email</a>
-        <a href="content/Resume.pdf" target="_blank" rel="noopener">Résumé</a>
-        <a href="https://cal.com/Harishwar" target="_blank" rel="noopener">Calendar</a>
-      </nav>
+<header id="header">
+  <div class="wrap nav">
+    <a class="brand" href="#top">HS<span class="star">✱</span></a>
+    <ul class="nav-mid">
+      <li><a href="#numbers">Numbers</a></li>
+      <li><a href="#engines">Engines</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <span class="clock" id="clock">BLR --:-- IST</span>
+      <a class="btn-nav" href="https://cal.com/harishwar" target="_blank" rel="noopener">Book a call ↗</a>
     </div>
-    <div class="container"><p class="footer__copy">© <span id="year">2026</span> Harishwar Sagar · Built systems-first.</p></div>
-  </footer>
+  </div>
+</header>
 
-  <button class="totop" id="toTop" aria-label="Back to top">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5m0 0l-6 6m6-6l6 6"></path></svg>
-  </button>
+<main id="top">
+<!-- ════════ HERO ════════ -->
+<section class="hero">
+  <div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div>
+  <div class="wrap">
+    <span class="hero-status rv in"><span class="pulse"></span>Available for global roles — Remote · US EST/PST</span>
+    <h1 class="name" aria-label="Harishwar Sagar">
+      <span class="line l1" aria-hidden="true"><span class="lt" style="--i:0">H</span><span class="lt" style="--i:1">A</span><span class="lt" style="--i:2">R</span><span class="lt" style="--i:3">I</span><span class="lt" style="--i:4">S</span><span class="lt" style="--i:5">H</span><span class="lt" style="--i:6">W</span><span class="lt" style="--i:7">A</span><span class="lt" style="--i:8">R</span></span>
+      <span class="line l2" aria-hidden="true"><span class="lt" style="--i:9">S</span><span class="lt" style="--i:10">A</span><span class="lt" style="--i:11">G</span><span class="lt" style="--i:12">A</span><span class="lt" style="--i:13">R</span><span class="star-big">✱</span></span>
+    </h1>
+    <div class="hero-row">
+      <p class="hero-title">Revenue Operations <b>×</b> Go-To-Market Engineer</p>
+      <p class="hero-bio">I run the <b>strategy</b> — pricing, forecasting, P&amp;L — and build the <b>systems</b> that execute it: CRM architecture, lead routing, automation across the GTM stack.
+        <span class="loc">Bangalore, India · Engineering roots · GTM brain</span>
+      </p>
+    </div>
+    <div class="hero-ctas">
+      <a class="btn btn-fire magnetic" href="https://cal.com/harishwar" target="_blank" rel="noopener">Book a call <span class="ico ico-up">↗</span></a>
+      <a class="btn btn-line magnetic" href="Harishwar_Sagar_GTM_RevOps_Resume.pdf" download>Download résumé <span class="ico ico-dn">↓</span></a>
+    </div>
+  </div>
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Revenue Operations<i>✦</i>GTM Engineering<i>✦</i>Pricing Strategy<i>✦</i>Forecasting<i>✦</i>Automation<i>✦</i>Demand Gen<i>✦</i>CRO<i>✦</i>P&amp;L Ownership<i>✦</i></span>
+      <span>Revenue Operations<i>✦</i>GTM Engineering<i>✦</i>Pricing Strategy<i>✦</i>Forecasting<i>✦</i>Automation<i>✦</i>Demand Gen<i>✦</i>CRO<i>✦</i>P&amp;L Ownership<i>✦</i></span>
+    </div>
+  </div>
+</section>
 
-  <template id="__bundler_thumbnail" data-bg-color="#241c15">
-    <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
-      <rect width="1200" height="800" fill="#241c15"/>
-      <circle cx="600" cy="400" r="220" fill="none" stroke="#ee6c39" stroke-width="3" stroke-dasharray="10 12" opacity="0.6"/>
-      <text x="600" y="445" font-family="Georgia, 'Times New Roman', serif" font-size="200" font-style="italic" fill="#f5814f" text-anchor="middle">HS</text>
-    </svg>
-  </template>
-  <script src="js/main.js" defer></script>
+<!-- ════════ LOGO BELT ════════ -->
+<div class="belt" id="stack">
+  <p class="belt-label">The stack I run daily</p>
+  <div class="belt-row">
+    <div class="belt-track">
+      <span class="chipL"><svg viewBox="0 0 24 24" fill="#FF7A59"><path d="M18.164 7.93V5.084a2.198 2.198 0 001.267-1.978v-.067A2.2 2.2 0 0017.238.845h-.067a2.2 2.2 0 00-2.193 2.193v.067a2.196 2.196 0 001.252 1.973l.013.006v2.852a6.22 6.22 0 00-2.969 1.31l.012-.01-7.828-6.095A2.497 2.497 0 104.3 4.656l-.012.006 7.697 5.991a6.176 6.176 0 00-1.038 3.446c0 1.343.425 2.588 1.147 3.607l-.013-.02-2.342 2.343a1.968 1.968 0 00-.58-.095h-.002a2.033 2.033 0 102.033 2.033 1.978 1.978 0 00-.1-.595l.005.014 2.317-2.317a6.247 6.247 0 104.782-11.134l-.036-.005zm-.964 9.378a3.206 3.206 0 113.215-3.207v.002a3.206 3.206 0 01-3.207 3.207z"/></svg>HubSpot</span>
+      <span class="chipL"><span class="dot" style="background:#00A1E0"></span>Salesforce</span>
+      <span class="chipL"><svg viewBox="0 0 24 24" fill="#EA4B71"><path d="M21.4737 5.6842c-1.1772 0-2.1663.8051-2.4468 1.8947h-2.8955c-1.235 0-2.289.893-2.492 2.111l-.1038.623a1.263 1.263 0 0 1-1.246 1.0555H11.289c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947s-2.1663.8051-2.4467 1.8947H4.973c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947C1.1311 9.4737 0 10.6047 0 12s1.131 2.5263 2.5263 2.5263c1.1772 0 2.1663-.8051 2.4468-1.8947h1.4223c.2804 1.0896 1.2696 1.8947 2.4467 1.8947 1.1772 0 2.1663-.8051 2.4468-1.8947h1.0008a1.263 1.263 0 0 1 1.2459 1.0555l.1038.623c.203 1.218 1.257 2.111 2.492 2.111h.3692c.2804 1.0895 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263c-1.1772 0-2.1664.805-2.4468 1.8947h-.3692a1.263 1.263 0 0 1-1.246-1.0555l-.1037-.623A2.52 2.52 0 0 0 13.9607 12a2.52 2.52 0 0 0 .821-1.4794l.1038-.623a1.263 1.263 0 0 1 1.2459-1.0555h2.8955c.2805 1.0896 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263m0 1.2632a1.263 1.263 0 0 1 1.2631 1.2631 1.263 1.263 0 0 1-1.2631 1.2632 1.263 1.263 0 0 1-1.2632-1.2632 1.263 1.263 0 0 1 1.2632-1.2631M2.5263 10.7368A1.263 1.263 0 0 1 3.7895 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 1.2632 12a1.263 1.263 0 0 1 1.2631-1.2632m6.3158 0A1.263 1.263 0 0 1 10.1053 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 7.579 12a1.263 1.263 0 0 1 1.2632-1.2632m10.1053 3.7895a1.263 1.263 0 0 1 1.2631 1.2632 1.263 1.263 0 0 1-1.2631 1.2631 1.263 1.263 0 0 1-1.2632-1.2631 1.263 1.263 0 0 1 1.2632-1.2632"/></svg>n8n</span>
+      <span class="chipL"><svg viewBox="0 0 24 24" fill="#FF4F00"><path d="M4.157 0A4.151 4.151 0 0 0 0 4.161v15.678A4.151 4.151 0 0 0 4.157 24h15.682A4.152 4.152 0 0 0 24 19.839V4.161A4.152 4.152 0 0 0 19.839 0H4.157Zm10.61 8.761h.03a.577.577 0 0 1 .23.038.585.585 0 0 1 .201.124.63.63 0 0 1 .162.431.612.612 0 0 1-.162.435.58.58 0 0 1-.201.128.58.58 0 0 1-.23.042.529.529 0 0 1-.235-.042.585.585 0 0 1-.332-.328.559.559 0 0 1-.038-.235.613.613 0 0 1 .17-.431.59.59 0 0 1 .405-.162Zm2.853 1.572c.03.004.061.004.095.004.325-.011.646.064.937.219.238.144.431.355.552.609.128.279.189.582.185.888v.193a2 2 0 0 1 0 .219h-2.498c.003.227.075.45.204.642a.78.78 0 0 0 .646.265.714.714 0 0 0 .484-.136.642.642 0 0 0 .23-.318l.915.257a1.398 1.398 0 0 1-.28.537c-.14.159-.321.284-.521.355a2.234 2.234 0 0 1-.836.136 1.923 1.923 0 0 1-1.001-.245 1.618 1.618 0 0 1-.665-.703 2.221 2.221 0 0 1-.227-1.036 1.95 1.95 0 0 1 .48-1.398 1.9 1.9 0 0 1 1.3-.488Zm-9.607.023c.162.004.325.026.48.079.207.065.4.174.563.314.26.302.393.692.366 1.088v2.276H8.53l-.109-.711h-.065c-.064.163-.155.31-.272.439a1.122 1.122 0 0 1-.374.264 1.023 1.023 0 0 1-.453.083 1.334 1.334 0 0 1-.866-.264.965.965 0 0 1-.329-.801.993.993 0 0 1 .076-.431 1.02 1.02 0 0 1 .242-.363 1.478 1.478 0 0 1 1.043-.303h.952v-.181a.696.696 0 0 0-.136-.454.553.553 0 0 0-.438-.154.695.695 0 0 0-.378.086.48.48 0 0 0-.193.254l-.99-.144a1.26 1.26 0 0 1 .257-.563c.14-.174.321-.302.533-.378.261-.091.54-.136.82-.129.053-.003.106-.007.163-.007Zm4.384.007c.174 0 .347.038.506.114.182.083.34.211.458.374.257.423.377.911.351 1.406a2.53 2.53 0 0 1-.355 1.448 1.148 1.148 0 0 1-1.009.517c-.204 0-.401-.045-.582-.136a1.052 1.052 0 0 1-.48-.457 1.298 1.298 0 0 1-.114-.234h-.045l.004 1.784h-1.059v-4.713h.904l.117.805h.057c.068-.208.177-.401.328-.56a1.129 1.129 0 0 1 .843-.344h.076v-.004Zm7.559.084h.903l.113.805h.053a1.37 1.37 0 0 1 .235-.484.813.813 0 0 1 .313-.242.82.82 0 0 1 .39-.076h.234v1.051h-.401a.662.662 0 0 0-.313.008.623.623 0 0 0-.272.155.663.663 0 0 0-.174.26.683.683 0 0 0-.027.314v1.875h-1.054v-3.666Zm-17.515.003h3.262v.896L3.73 13.104l.034.113h1.973l.042.9H2.4v-.9l1.931-1.754-.045-.117H2.441v-.896Zm11.815 0h1.055v3.659h-1.055V10.45Zm3.443.684.019.016a.69.69 0 0 0-.351.045.756.756 0 0 0-.287.204c-.11.155-.174.336-.189.522h1.545c-.034-.526-.257-.787-.74-.787h.003Zm-5.718.163c-.026 0-.057 0-.083.004a.78.78 0 0 0-.31.053.746.746 0 0 0-.257.189 1.016 1.016 0 0 0-.204.695v.064c-.015.257.057.507.204.711a.634.634 0 0 0 .253.196.638.638 0 0 0 .314.061.644.644 0 0 0 .578-.265c.14-.223.204-.48.189-.74a1.216 1.216 0 0 0-.181-.711.677.677 0 0 0-.503-.257Zm-4.509 1.266a.464.464 0 0 0-.268.102.373.373 0 0 0-.114.276c0 .053.008.106.027.155a.375.375 0 0 0 .087.132.576.576 0 0 0 .397.11v.004a.863.863 0 0 0 .563-.182.573.573 0 0 0 .211-.457v-.14h-.903Z"/></svg>Zapier</span>
+      <span class="chipL"><svg viewBox="0 0 24 24" fill="#6D00CC"><path d="M13.38 3.498c-.27 0-.511.19-.566.465L9.85 18.986a.578.578 0 0 0 .453.678l4.095.826a.58.58 0 0 0 .682-.455l2.963-15.021a.578.578 0 0 0-.453-.678l-4.096-.826a.589.589 0 0 0-.113-.012zm-5.876.098a.576.576 0 0 0-.516.318L.062 17.697a.575.575 0 0 0 .256.774l3.733 1.877a.578.578 0 0 0 .775-.258l6.926-13.781a.577.577 0 0 0-.256-.776L7.762 3.658a.571.571 0 0 0-.258-.062zm11.74.115a.576.576 0 0 0-.576.576v15.426c0 .318.258.578.576.578h4.178a.58.58 0 0 0 .578-.578V4.287a.578.578 0 0 0-.578-.576Z"/></svg>Make</span>
+      <span class="chipL"><span class="dot" style="background:#16110A"></span>Clay</span>
+      <span class="chipL"><span class="dot" style="background:#FFC700"></span>Apollo</span>
+      <span class="chipL"><svg viewBox="0 0 24 24" fill="#4285F4"><path d="M11.9475 0c-1.1598.0021-2.0982.944-2.096 2.1038a2.1 2.1 0 00.356 1.166l.895-.8959a.884.884 0 11.565.564l-.895.895c.9593.6478 2.2621.3953 2.91-.564.6478-.9593.3953-2.262-.564-2.91A2.096 2.096 0 0011.9475 0zm-.835 6.1128a3.2629 3.2629 0 00-.653-1.965l-1.164 1.162a1.667 1.667 0 01-.318 2.012l.632 1.5449a3.2819 3.2819 0 001.503-2.754zm-3.2499 1.666h-.03c-.9217.0009-1.6697-.7455-1.6707-1.6673-.001-.9217.7454-1.6697 1.6672-1.6707a1.669 1.669 0 01.9195.275l1.152-1.152c-1.4069-1.141-3.4724-.9257-4.6135.4811s-.9257 3.4723.481 4.6135a3.2799 3.2799 0 002.7275.6652l-.633-1.5439v-.001zm4.1279 1.3359c-.728 0-1.452.106-2.15.315l.922 2.2519c2.6872-.6819 5.4184.9438 6.1002 3.631.6818 2.6873-.9439 5.4184-3.6311 6.1002s-5.4184-.9439-6.1002-3.631c-.5682-2.2394.4655-4.5774 2.5041-5.6643l-.91-2.2449c-3.6908 1.808-5.2173 6.2657-3.4093 9.9567l.0005.001c1.808 3.6909 6.2657 5.2173 9.9567 3.4093l.001-.0005c3.6913-1.8071 5.2187-6.2645 3.4116-9.9558a7.4417 7.4417 0 00-6.6865-4.1696h-.008l-.001.001z"/></svg>Looker</span>
+      <span class="chipL"><svg viewBox="0 0 24 24" fill="#E37400"><path d="M22.84 2.9982v17.9987c.0086 1.6473-1.3197 2.9897-2.967 2.9984a2.9808 2.9808 0 01-.3677-.0208c-1.528-.226-2.6477-1.5558-2.6105-3.1V3.1204c-.0369-1.5458 1.0856-2.8762 2.6157-3.1 1.6361-.1915 3.1178.9796 3.3093 2.6158.014.1201.0208.241.0202.3619zM4.1326 18.0548c-1.6417 0-2.9726 1.331-2.9726 2.9726C1.16 22.6691 2.4909 24 4.1326 24s2.9726-1.3309 2.9726-2.9726-1.331-2.9726-2.9726-2.9726zm7.8728-9.0098c-.0171 0-.0342 0-.0513.0003-1.6495.0904-2.9293 1.474-2.891 3.1256v7.9846c0 2.167.9535 3.4825 2.3505 3.763 1.6118.3266 3.1832-.7152 3.5098-2.327.04-.1974.06-.3983.0593-.5998v-8.9585c.003-1.6474-1.33-2.9852-2.9773-2.9882z"/></svg>GA4</span>
+      <span class="chipL" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#FF7A59"><path d="M18.164 7.93V5.084a2.198 2.198 0 001.267-1.978v-.067A2.2 2.2 0 0017.238.845h-.067a2.2 2.2 0 00-2.193 2.193v.067a2.196 2.196 0 001.252 1.973l.013.006v2.852a6.22 6.22 0 00-2.969 1.31l.012-.01-7.828-6.095A2.497 2.497 0 104.3 4.656l-.012.006 7.697 5.991a6.176 6.176 0 00-1.038 3.446c0 1.343.425 2.588 1.147 3.607l-.013-.02-2.342 2.343a1.968 1.968 0 00-.58-.095h-.002a2.033 2.033 0 102.033 2.033 1.978 1.978 0 00-.1-.595l.005.014 2.317-2.317a6.247 6.247 0 104.782-11.134l-.036-.005zm-.964 9.378a3.206 3.206 0 113.215-3.207v.002a3.206 3.206 0 01-3.207 3.207z"/></svg>HubSpot</span>
+      <span class="chipL" aria-hidden="true"><span class="dot" style="background:#00A1E0"></span>Salesforce</span>
+      <span class="chipL" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#EA4B71"><path d="M21.4737 5.6842c-1.1772 0-2.1663.8051-2.4468 1.8947h-2.8955c-1.235 0-2.289.893-2.492 2.111l-.1038.623a1.263 1.263 0 0 1-1.246 1.0555H11.289c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947s-2.1663.8051-2.4467 1.8947H4.973c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947C1.1311 9.4737 0 10.6047 0 12s1.131 2.5263 2.5263 2.5263c1.1772 0 2.1663-.8051 2.4468-1.8947h1.4223c.2804 1.0896 1.2696 1.8947 2.4467 1.8947 1.1772 0 2.1663-.8051 2.4468-1.8947h1.0008a1.263 1.263 0 0 1 1.2459 1.0555l.1038.623c.203 1.218 1.257 2.111 2.492 2.111h.3692c.2804 1.0895 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263c-1.1772 0-2.1664.805-2.4468 1.8947h-.3692a1.263 1.263 0 0 1-1.246-1.0555l-.1037-.623A2.52 2.52 0 0 0 13.9607 12a2.52 2.52 0 0 0 .821-1.4794l.1038-.623a1.263 1.263 0 0 1 1.2459-1.0555h2.8955c.2805 1.0896 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263m0 1.2632a1.263 1.263 0 0 1 1.2631 1.2631 1.263 1.263 0 0 1-1.2631 1.2632 1.263 1.263 0 0 1-1.2632-1.2632 1.263 1.263 0 0 1 1.2632-1.2631M2.5263 10.7368A1.263 1.263 0 0 1 3.7895 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 1.2632 12a1.263 1.263 0 0 1 1.2631-1.2632m6.3158 0A1.263 1.263 0 0 1 10.1053 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 7.579 12a1.263 1.263 0 0 1 1.2632-1.2632m10.1053 3.7895a1.263 1.263 0 0 1 1.2631 1.2632 1.263 1.263 0 0 1-1.2631 1.2631 1.263 1.263 0 0 1-1.2632-1.2631 1.263 1.263 0 0 1 1.2632-1.2632"/></svg>n8n</span>
+      <span class="chipL" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#6D00CC"><path d="M13.38 3.498c-.27 0-.511.19-.566.465L9.85 18.986a.578.578 0 0 0 .453.678l4.095.826a.58.58 0 0 0 .682-.455l2.963-15.021a.578.578 0 0 0-.453-.678l-4.096-.826a.589.589 0 0 0-.113-.012zm-5.876.098a.576.576 0 0 0-.516.318L.062 17.697a.575.575 0 0 0 .256.774l3.733 1.877a.578.578 0 0 0 .775-.258l6.926-13.781a.577.577 0 0 0-.256-.776L7.762 3.658a.571.571 0 0 0-.258-.062zm11.74.115a.576.576 0 0 0-.576.576v15.426c0 .318.258.578.576.578h4.178a.58.58 0 0 0 .578-.578V4.287a.578.578 0 0 0-.578-.576Z"/></svg>Make</span>
+      <span class="chipL" aria-hidden="true"><span class="dot" style="background:#16110A"></span>Clay</span>
+      <span class="chipL" aria-hidden="true"><span class="dot" style="background:#FFC700"></span>Apollo</span>
+    </div>
+  </div>
+  <div class="belt-row rev">
+    <div class="belt-track">
+      <span class="chipL"><svg viewBox="0 0 24 24" fill="#4285F4"><path d="M3.9998 22.9291C1.7908 22.9291 0 21.1383 0 18.9293s1.7908-3.9998 3.9998-3.9998 3.9998 1.7908 3.9998 3.9998-1.7908 3.9998-3.9998 3.9998zm19.4643-6.0004L15.4632 3.072C14.3586 1.1587 11.9121.5028 9.9988 1.6074S7.4295 5.1585 8.5341 7.0718l8.0009 13.8567c1.1046 1.9133 3.5511 2.5679 5.4644 1.4646 1.9134-1.1046 2.568-3.5511 1.4647-5.4644zM7.5137 4.8438L1.5645 15.1484A4.5 4.5 0 0 1 4 14.4297c2.5597-.0075 4.6248 2.1585 4.4941 4.7148l3.2168-5.5723-3.6094-6.25c-.4499-.7793-.6322-1.6394-.5878-2.4784z"/></svg>Google Ads</span>
+      <span class="chipL"><svg viewBox="0 0 24 24" fill="#0467DF"><path d="M6.915 4.03c-1.968 0-3.683 1.28-4.871 3.113C.704 9.208 0 11.883 0 14.449c0 .706.07 1.369.21 1.973a6.624 6.624 0 0 0 .265.86 5.297 5.297 0 0 0 .371.761c.696 1.159 1.818 1.927 3.593 1.927 1.497 0 2.633-.671 3.965-2.444.76-1.012 1.144-1.626 2.663-4.32l.756-1.339.186-.325c.061.1.121.196.183.3l2.152 3.595c.724 1.21 1.665 2.556 2.47 3.314 1.046.987 1.992 1.22 3.06 1.22 1.075 0 1.876-.355 2.455-.843a3.743 3.743 0 0 0 .81-.973c.542-.939.861-2.127.861-3.745 0-2.72-.681-5.357-2.084-7.45-1.282-1.912-2.957-2.93-4.716-2.93-1.047 0-2.088.467-3.053 1.308-.652.57-1.257 1.29-1.82 2.05-.69-.875-1.335-1.547-1.958-2.056-1.182-.966-2.315-1.303-3.454-1.303zm10.16 2.053c1.147 0 2.188.758 2.992 1.999 1.132 1.748 1.647 4.195 1.647 6.4 0 1.548-.368 2.9-1.839 2.9-.58 0-1.027-.23-1.664-1.004-.496-.601-1.343-1.878-2.832-4.358l-.617-1.028a44.908 44.908 0 0 0-1.255-1.98c.07-.109.141-.224.211-.327 1.12-1.667 2.118-2.602 3.358-2.602zm-10.201.553c1.265 0 2.058.791 2.675 1.446.307.327.737.871 1.234 1.579l-1.02 1.566c-.757 1.163-1.882 3.017-2.837 4.338-1.191 1.649-1.81 1.817-2.486 1.817-.524 0-1.038-.237-1.383-.794-.263-.426-.464-1.13-.464-2.046 0-2.221.63-4.535 1.66-6.088.454-.687.964-1.226 1.533-1.533a2.264 2.264 0 0 1 1.088-.285z"/></svg>Meta Ads</span>
+      <span class="chipL"><svg viewBox="0 0 24 24" fill="#3776AB"><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/></svg>Python</span>
+      <span class="chipL"><svg viewBox="0 0 24 24" fill="#D97757"><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></svg>Claude</span>
+      <span class="chipL"><svg viewBox="0 0 24 24" fill="#8E75B2"><path d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81"/></svg>Gemini</span>
+      <span class="chipL"><span class="dot" style="background:#0A66C2"></span>Sales Navigator</span>
+      <span class="chipL"><span class="dot" style="background:#6366F1"></span>Instantly</span>
+      <span class="chipL"><svg viewBox="0 0 24 24" fill="#FC8019"><path d="M12.034 24c-.376-.411-2.075-2.584-3.95-5.513-.547-.916-.901-1.63-.833-1.814.178-.48 3.355-.743 4.333-.308.298.132.29.307.29.409 0 .44-.022 1.619-.022 1.619a.441.441 0 1 0 .883-.002l-.005-2.939c0-.255-.278-.319-.331-.329-.511-.002-1.548-.006-2.661-.006-2.457 0-3.006.101-3.423-.172-.904-.591-2.383-4.577-2.417-6.819C3.849 4.964 5.723 2.225 8.362.868A8.13 8.13 0 0 1 12.026 0c4.177 0 7.617 3.153 8.075 7.209l.001.011c.084.981-5.321 1.189-6.39.904-.164-.044-.206-.212-.206-.284L13.5 4.996a.442.442 0 0 0-.884.002l.009 3.866a.33.33 0 0 0 .268.32l3.354-.001c1.79 0 2.542.207 3.042.588.333.254.461.739.349 1.37C18.633 16.755 12.273 23.71 12.034 24z"/></svg>Swiggy</span>
+      <span class="chipL"><svg viewBox="0 0 24 24" fill="#E23744"><path d="M19.615 9.45l-1.258.473-.167.71-.446.021-.115.978h.408l-.211 1.51c-.131.939.036 1.381.865 1.381.488 0 .91-.175 1.135-.297l.145-.9c-.167.083-.436.19-.618.19-.247 0-.276-.13-.225-.488l.189-1.396h.843c.03-.206.131-.877.16-1h-.865zm-3.779 1.002c-.115.002-.236.01-.361.026a3.592 3.592 0 0 0-1.347.432l.26.789c.269-.15.615-.28.978-.326.538-.066.757.1.79.375.014.109.004.199-.005.289l-.014.056a3.46 3.46 0 0 0-1.097-.036c-.518.063-.943.273-1.204.6a1.324 1.324 0 0 0-.225 1.034c.127.583.553.84 1.199.76.45-.055.812-.27 1.076-.63a2.665 2.665 0 0 1-.03.304 1.74 1.74 0 0 1-.072.29l1.244.001a3.657 3.657 0 0 1-.001-.365c.036-.459.118-1.143.247-2.051a2.397 2.397 0 0 0-.002-.59c-.08-.644-.628-.969-1.436-.958zm6.536.063c-1.194 0-2.107 1.067-2.107 2.342 0 .959.552 1.693 1.628 1.693 1.2 0 2.107-1.067 2.107-2.35 0-.95-.538-1.685-1.628-1.685zm-11.777.041c-.538 0-1.12.465-1.52 1.236.102-.504.08-1.076.051-1.198a8.964 8.964 0 0 1-1.287.122 6.9 6.9 0 0 1-.073 1.243l-.167 1.145c-.066.45-.138.969-.211 1.297h1.353c.007-.199.058-.511.094-.786l.116-.786c.095-.511.502-1.114.815-1.114.182 0 .175.176.124.504l-.131.885c-.066.45-.138.969-.211 1.297h1.367c.008-.199.051-.512.088-.786l.116-.786c.094-.512.502-1.114.814-1.114.182 0 .175.168.146.396l-.327 2.29H13l.438-2.609c.095-.649.044-1.236-.676-1.236-.523 0-1.09.443-1.49 1.182.087-.61.036-1.182-.677-1.182zm-4.88.008c-1.177 0-2.08 1.053-2.08 2.312 0 .946.546 1.67 1.608 1.67 1.185 0 2.08-1.052 2.08-2.319 0-.938-.531-1.663-1.607-1.663zm-5.126.091c-.05.39-.102.778-.175 1.13.328-.008.619-.016 1.411-.016l-1.81 1.96-.015.703c.444-.03.997-.039 1.63-.039.566 0 1.134.008 1.497.039.065-.458.13-.763.21-1.137-.275.015-.755.023-1.512.023l1.81-1.969.023-.694c-.437.023-.83.03-1.52.03-.749 0-.975-.007-1.549-.03zm4.988.927c.255 0 .408.228.408.701 0 .687-.276 1.251-.626 1.251-.261 0-.414-.236-.414-.702 0-.694.283-1.25.632-1.25zm16.629 0c.254 0 .407.228.407.701 0 .687-.276 1.251-.625 1.251-.262 0-.415-.236-.415-.702 0-.694.284-1.25.633-1.25zM15.51 12.64c.206-.003.403.024.55.058l-.013.118c-.075.44-.39.881-.848.938-.31.037-.578-.148-.608-.39a.538.538 0 0 1 .114-.41c.117-.159.336-.268.599-.3.069-.009.138-.013.206-.014Z"/></svg>Zomato</span>
+      <span class="chipL" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#4285F4"><path d="M3.9998 22.9291C1.7908 22.9291 0 21.1383 0 18.9293s1.7908-3.9998 3.9998-3.9998 3.9998 1.7908 3.9998 3.9998-1.7908 3.9998-3.9998 3.9998zm19.4643-6.0004L15.4632 3.072C14.3586 1.1587 11.9121.5028 9.9988 1.6074S7.4295 5.1585 8.5341 7.0718l8.0009 13.8567c1.1046 1.9133 3.5511 2.5679 5.4644 1.4646 1.9134-1.1046 2.568-3.5511 1.4647-5.4644zM7.5137 4.8438L1.5645 15.1484A4.5 4.5 0 0 1 4 14.4297c2.5597-.0075 4.6248 2.1585 4.4941 4.7148l3.2168-5.5723-3.6094-6.25c-.4499-.7793-.6322-1.6394-.5878-2.4784z"/></svg>Google Ads</span>
+      <span class="chipL" aria-hidden="true"><span class="dot" style="background:#0A66C2"></span>Sales Navigator</span>
+      <span class="chipL" aria-hidden="true"><span class="dot" style="background:#6366F1"></span>Instantly</span>
+      <span class="chipL" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#8E75B2"><path d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81"/></svg>Gemini</span>
+      <span class="chipL" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#FC8019"><path d="M12.034 24c-.376-.411-2.075-2.584-3.95-5.513-.547-.916-.901-1.63-.833-1.814.178-.48 3.355-.743 4.333-.308.298.132.29.307.29.409 0 .44-.022 1.619-.022 1.619a.441.441 0 1 0 .883-.002l-.005-2.939c0-.255-.278-.319-.331-.329-.511-.002-1.548-.006-2.661-.006-2.457 0-3.006.101-3.423-.172-.904-.591-2.383-4.577-2.417-6.819C3.849 4.964 5.723 2.225 8.362.868A8.13 8.13 0 0 1 12.026 0c4.177 0 7.617 3.153 8.075 7.209l.001.011c.084.981-5.321 1.189-6.39.904-.164-.044-.206-.212-.206-.284L13.5 4.996a.442.442 0 0 0-.884.002l.009 3.866a.33.33 0 0 0 .268.32l3.354-.001c1.79 0 2.542.207 3.042.588.333.254.461.739.349 1.37C18.633 16.755 12.273 23.71 12.034 24z"/></svg>Swiggy</span>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ FIRE STRIP ════════ -->
+<div class="strip" aria-hidden="true">
+  <div class="strip-track">
+    <span>10× Daily Revenue<i>✦</i>50% Gross Margins<i>✦</i>60% Admin Automated<i>✦</i>33% Close Rate<i>✦</i>Custom Revenue OS<i>✦</i></span>
+    <span>10× Daily Revenue<i>✦</i>50% Gross Margins<i>✦</i>60% Admin Automated<i>✦</i>33% Close Rate<i>✦</i>Custom Revenue OS<i>✦</i></span>
+  </div>
+</div>
+<!-- ════════ 01 · NUMBERS ════════ -->
+<section id="numbers">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rv"><span class="kicker">01 — The numbers</span>
+        <h2 class="h2">Proof, not <em>promises</em></h2>
+      </div>
+      <p class="sec-note rv rv1">Every figure below is from the last three years of owning revenue end-to-end — strategy, execution and the systems underneath.</p>
+    </div>
+    <div class="num-grid">
+      <div class="num-card tilt rv"><span class="wm">10×</span>
+        <div class="num-val">~<span class="count" data-target="10">0</span><span class="sm">×</span></div>
+        <p class="num-lab">Daily revenue scaled, owning the entire funnel</p>
+      </div>
+      <div class="num-card tilt rv rv1"><span class="wm">50%</span>
+        <div class="num-val">~<span class="count" data-target="50">0</span><span class="sm">%</span></div>
+        <p class="num-lab">Gross margins held while scaling on a lean budget</p>
+      </div>
+      <div class="num-card tilt rv rv2"><span class="wm">60%</span>
+        <div class="num-val">~<span class="count" data-target="60">0</span><span class="sm">%</span></div>
+        <p class="num-lab">Manual ops admin eliminated via custom Revenue OS</p>
+      </div>
+      <div class="num-card tilt rv rv3"><span class="wm">33%</span>
+        <div class="num-val"><span class="count" data-target="33">0</span><span class="sm">%</span></div>
+        <p class="num-lab">Close rate on inbound B2B leads, discovery to signature</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 02 · ENGINES ════════ -->
+<section class="engines" id="engines">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rv"><span class="kicker">02 — The approach</span>
+        <h2 class="h2">One operator,<br><em>two engines</em></h2>
+      </div>
+      <p class="sec-note rv rv1">Most revenue people run strategy <i>or</i> build systems. The edge is doing both — so the strategy ships as software, not slides.</p>
+    </div>
+    <div class="eng-grid">
+      <div class="eng-card rv">
+        <span class="eng-tag">The Strategist</span>
+        <h3>Runs the revenue strategy</h3>
+        <p class="d">The commercial brain — where to price, where to spend, what to forecast, and which levers actually move the P&amp;L.</p>
+        <ul class="eng-list">
+          <li><b>Pricing &amp; deal desk</b> — discount strategy, quoting, strict-margin structuring</li>
+          <li><b>Forecasting &amp; pipeline</b> — process design, stage hygiene, predictable revenue</li>
+          <li><b>P&amp;L &amp; unit economics</b> — CAC, LTV, ROAS, budget optimization</li>
+          <li><b>Demand generation</b> — paid media, SEO &amp; GEO, outbound, CRO, A/B testing</li>
+        </ul>
+      </div>
+      <div class="eng-x rv rv1" aria-hidden="true">×</div>
+      <div class="eng-card rv rv2">
+        <span class="eng-tag">The Builder</span>
+        <h3>Builds the revenue systems</h3>
+        <p class="d">The engineering hands — a real engineering background applied to the GTM stack, so the strategy runs itself.</p>
+        <ul class="eng-list">
+          <li><b>CRM architecture</b> — HubSpot &amp; Salesforce design, lead routing, lifecycle</li>
+          <li><b>Enrichment &amp; outbound</b> — Clay, Apollo, Sales Navigator, Instantly pipelines</li>
+          <li><b>Automation</b> — n8n, Zapier, Make &amp; webhooks stitched into a Revenue OS</li>
+          <li><b>Data &amp; AI</b> — SQL, Python, REST APIs, agentic AI workflows</li>
+        </ul>
+      </div>
+    </div>
+    <p class="eng-quote rv">"Most operators pick a side. I close deals at <b>33%</b> — and ship the automation that routes them."</p>
+  </div>
+</section>
+
+<!-- ════════ 03 · EXPERIENCE ════════ -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rv"><span class="kicker">03 — Track record</span>
+        <h2 class="h2">Where the <em>10× happened</em></h2>
+      </div>
+      <p class="sec-note rv rv1">Four chapters: engineer → engineer who sells → operator who owns the number. Scroll — the cards stack.</p>
+    </div>
+    <div class="xp-stack">
+      <article class="xp-card" style="top:96px"><span class="ghost">01</span>
+        <div>
+          <h3 class="xp-role">GTM &amp; Revenue Operations Lead</h3>
+          <p class="xp-org"><b>Snack Theory</b> — Cloud Kitchen division of The Good Chef · Bangalore</p>
+          <div><span class="xp-date">Jun 2025 — Present</span><span class="xp-now">Current</span></div>
+        </div>
+        <div>
+          <ul class="xp-pts">
+            <li>Scaled daily revenue <b>~10×</b> owning the entire funnel — paid media on Google, Meta, YouTube &amp; LinkedIn, SEO &amp; GEO, Google Shopping, plus Swiggy, Zomato &amp; JustDial partnerships.</li>
+            <li>Engineered a custom <b>"Revenue OS"</b> across n8n, Zapier &amp; webhooks — automating orders, inventory and finance reporting, cutting manual admin <b>~60%</b>.</li>
+            <li>Owned <b>P&amp;L, pricing and budget</b> — growing sales on a lean budget while holding ~50% gross margins.</li>
+            <li>Built the acquisition system traffic-to-close; won recurring corporate accounts with continuous A/B and lifecycle testing.</li>
+          </ul>
+          <div class="xp-tags"><span class="tag">Revenue OS</span><span class="tag">Paid Media</span><span class="tag">P&amp;L</span><span class="tag">Marketplaces</span></div>
+        </div>
+      </article>
+      <article class="xp-card" style="top:118px"><span class="ghost">02</span>
+        <div>
+          <h3 class="xp-role">Revenue &amp; Growth Manager</h3>
+          <p class="xp-org"><b>The Good Chef</b> — B2B Catering &amp; Events · Bangalore</p>
+          <div><span class="xp-date">Jul 2023 — Jun 2025</span></div>
+        </div>
+        <div>
+          <ul class="xp-pts">
+            <li>Ran the <b>full-cycle B2B sales process</b> — converting and retaining corporate clients including <b>Unacademy and HSBC</b> into recurring relationships.</li>
+            <li>Held a <b>33% close rate</b> on inbound leads through discovery, objection handling and high-value proposal positioning.</li>
+            <li>Owned <b>pricing authority</b> at a strict 50% gross margin; built the early demand engine across job portals, Bark, Google Business and Google Ads.</li>
+          </ul>
+          <div class="xp-tags"><span class="tag">B2B Sales</span><span class="tag">Pricing Authority</span><span class="tag">Demand Engine</span></div>
+        </div>
+      </article>
+      <article class="xp-card" style="top:140px"><span class="ghost">03</span>
+        <div>
+          <h3 class="xp-role">DevOps Engineer</h3>
+          <p class="xp-org"><b>Oracle</b> — Cerner Healthcare · Bangalore</p>
+          <div><span class="xp-date">May 2022 — Jul 2023</span></div>
+        </div>
+        <div>
+          <ul class="xp-pts">
+            <li>Primary engineering liaison on <b>daily calls with US stakeholders</b> — translating technical fixes into business value and supporting sales in advancing deals.</li>
+            <li>Led technical demos for decision-makers, framing complex deployments as <b>actionable ROI</b>.</li>
+            <li>Built CI/CD pipelines (GitLab, Jira automation, Chef) cutting build/release failures <b>40%+</b>; designed AWS solutions to customer requirements.</li>
+          </ul>
+          <div class="xp-tags"><span class="tag">US Stakeholders</span><span class="tag">CI/CD</span><span class="tag">AWS</span></div>
+        </div>
+      </article>
+      <article class="xp-card" style="top:162px"><span class="ghost">04</span>
+        <div>
+          <h3 class="xp-role">Software Engineer</h3>
+          <p class="xp-org"><b>Checkpoint Systems</b> · Bangalore</p>
+          <div><span class="xp-date">Nov 2020 — May 2022</span></div>
+        </div>
+        <div>
+          <ul class="xp-pts">
+            <li>Engineered cloud infrastructure (Azure, Docker, Kubernetes) at <b>99.9% uptime</b>; built automation in Python, Shell &amp; Selenium and full-stack features in Node.js, React &amp; SQL.</li>
+          </ul>
+          <div class="xp-tags"><span class="tag">Azure</span><span class="tag">Kubernetes</span><span class="tag">Full-Stack</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 04 · EDUCATION ════════ -->
+<section class="edu" id="education">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rv"><span class="kicker">04 — Foundation</span>
+        <h2 class="h2">Engineering <em>roots</em></h2>
+      </div>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card rv">
+        <span class="edu-kind">Degree</span>
+        <h3>B.Tech — Electronics &amp; Communications Engineering</h3>
+        <p>CMR Institute of Technology, Bangalore · 2020</p>
+      </div>
+      <div class="edu-card rv rv1">
+        <span class="edu-kind">Postgraduate Certificate</span>
+        <h3>Cloud Computing</h3>
+        <p>Manipal University · 2021</p>
+      </div>
+    </div>
+    <div class="cert-row rv">
+      <span class="cert">HubSpot Revenue Operations — HubSpot Academy (in progress)</span>
+      <span class="cert">AZ-900: Microsoft Azure Fundamentals — 2020</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 05 · CONTACT ════════ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <span class="kicker rv" style="justify-content:center">05 — Next step</span>
+    <h2 class="talk rv" id="talk">Let's&nbsp;talk</h2>
+    <p class="contact-sub rv rv1">Need someone who can own the number <b>and</b> the architecture behind it? Pricing to pipeline to automation — <b>30 minutes, no slides.</b></p>
+    <div class="contact-ctas rv rv2">
+      <a class="btn btn-fire magnetic" href="https://cal.com/harishwar" target="_blank" rel="noopener">Book a call <span class="ico ico-up">↗</span></a>
+      <a class="btn btn-line magnetic" href="mailto:SagarHarishwar@gmail.com">Email me <span class="ico ico-up">→</span></a>
+    </div>
+    <div class="contact-links rv rv3">
+      <a href="mailto:SagarHarishwar@gmail.com"><span class="s">✱</span>SagarHarishwar@gmail.com</a>
+      <a href="https://linkedin.com/in/harishwarsagar" target="_blank" rel="noopener"><span class="s">✱</span>LinkedIn</a>
+      <a href="Harishwar_Sagar_GTM_RevOps_Resume.pdf" download><span class="s">✱</span>Résumé (PDF)</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© <span id="year">2026</span> Harishwar Sagar · Bangalore → Worldwide</span>
+    <span class="sig">Designed as carefully as my <b>pipelines</b>.</span>
+    <button class="to-top" id="toTop">Back to top ↑</button>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var finePointer = window.matchMedia("(pointer: fine)").matches;
+
+  /* ── preloader ── */
+  var loader = document.getElementById("loader");
+  function finishLoad(){
+    document.body.classList.add("loaded");
+    if (loader){ loader.classList.add("done"); setTimeout(function(){ loader.remove(); }, 900); }
+  }
+  if (reduce){ finishLoad(); }
+  else { setTimeout(finishLoad, 1050); }
+
+  /* ── cursor glow (lerp) ── */
+  var glow = document.getElementById("glow");
+  if (glow && finePointer && !reduce){
+    var gx = -500, gy = -500, tx = gx, ty = gy;
+    window.addEventListener("mousemove", function(e){ tx = e.clientX; ty = e.clientY; }, {passive:true});
+    (function loop(){
+      gx += (tx - gx) * .08; gy += (ty - gy) * .08;
+      glow.style.left = gx + "px"; glow.style.top = gy + "px";
+      requestAnimationFrame(loop);
+    })();
+  }
+
+  /* ── progress + header ── */
+  var bar = document.getElementById("progress");
+  var header = document.getElementById("header");
+  var lastY = 0;
+  function onScroll(){
+    var h = document.documentElement;
+    var y = h.scrollTop;
+    var max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? (y / max) * 100 : 0) + "%";
+    header.classList.toggle("scrolled", y > 24);
+    header.classList.toggle("hide", y > 600 && y > lastY);
+    lastY = y;
+    stackFX();
+  }
+  window.addEventListener("scroll", onScroll, {passive:true});
+
+  /* ── IST clock ── */
+  var clock = document.getElementById("clock");
+  function tick(){
+    try{
+      var t = new Intl.DateTimeFormat("en-GB",{hour:"2-digit",minute:"2-digit",hour12:false,timeZone:"Asia/Kolkata"}).format(new Date());
+      clock.textContent = "BLR " + t + " IST";
+    }catch(e){ clock.textContent = ""; }
+  }
+  if (clock){ tick(); setInterval(tick, 30000); }
+
+  /* ── reveal on scroll ── */
+  var rvs = document.querySelectorAll(".rv");
+  if ("IntersectionObserver" in window && !reduce){
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, {threshold:.12, rootMargin:"0px 0px -7% 0px"});
+    rvs.forEach(function(el){ io.observe(el); });
+  } else { rvs.forEach(function(el){ el.classList.add("in"); }); }
+
+  /* ── counters ── */
+  function animateCount(el){
+    var target = parseInt(el.getAttribute("data-target"), 10) || 0;
+    if (reduce){ el.textContent = target; return; }
+    var dur = 1500, t0 = null;
+    function step(ts){
+      if (!t0) t0 = ts;
+      var p = Math.min((ts - t0) / dur, 1);
+      el.textContent = Math.round((1 - Math.pow(1 - p, 4)) * target);
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var counts = document.querySelectorAll(".count");
+  if ("IntersectionObserver" in window){
+    var cio = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting){ animateCount(e.target); cio.unobserve(e.target); } });
+    }, {threshold:.6});
+    counts.forEach(function(el){ cio.observe(el); });
+  } else { counts.forEach(function(el){ el.textContent = el.getAttribute("data-target"); }); }
+
+  /* ── 3D tilt on metric cards ── */
+  if (finePointer && !reduce){
+    document.querySelectorAll(".tilt").forEach(function(card){
+      card.addEventListener("mousemove", function(e){
+        var r = card.getBoundingClientRect();
+        var rx = ((e.clientY - r.top) / r.height - .5) * -9;
+        var ry = ((e.clientX - r.left) / r.width - .5) * 9;
+        card.style.transform = "perspective(800px) rotateX(" + rx + "deg) rotateY(" + ry + "deg) translateY(-4px)";
+      });
+      card.addEventListener("mouseleave", function(){ card.style.transform = ""; });
+    });
+  }
+
+  /* ── sticky stack scale ── */
+  var xpCards = Array.prototype.slice.call(document.querySelectorAll(".xp-card"));
+  function stackFX(){
+    if (reduce || xpCards.length < 2 || window.innerWidth < 861) return;
+    for (var i = 0; i < xpCards.length - 1; i++){
+      var r = xpCards[i].getBoundingClientRect();
+      var nr = xpCards[i+1].getBoundingClientRect();
+      var overlap = Math.min(Math.max((r.bottom - nr.top) / r.height, 0), 1);
+      xpCards[i].style.transform = "scale(" + (1 - overlap * .05) + ")";
+      xpCards[i].style.opacity = 1 - overlap * .25;
+    }
+  }
+
+  /* ── magnetic buttons ── */
+  if (finePointer && !reduce){
+    document.querySelectorAll(".magnetic").forEach(function(btn){
+      btn.addEventListener("mousemove", function(e){
+        var r = btn.getBoundingClientRect();
+        var x = e.clientX - r.left - r.width/2;
+        var y = e.clientY - r.top - r.height/2;
+        btn.style.transform = "translate(" + (x/r.width)*16 + "px," + (y/r.height)*16 + "px) scale(1.04)";
+      });
+      btn.addEventListener("mouseleave", function(){ btn.style.transform = ""; });
+    });
+  }
+
+  /* ── fit name & big text to width (never wraps mid-word) ── */
+  var nameEl = document.querySelector(".name");
+  var talkEl = document.getElementById("talk");
+  function fitLine(el, container, max, min, ratio){
+    el.style.fontSize = "100px";
+    var w = el.scrollWidth || 1;
+    var avail = container.clientWidth * (ratio || 1);
+    var size = Math.max(min, Math.min(max, 100 * avail / w));
+    el.style.fontSize = size + "px";
+    /* verify against the actually-rendered font and correct */
+    for (var k = 0; k < 3; k++){
+      var w2 = el.scrollWidth;
+      if (w2 <= avail || size <= min) break;
+      size = Math.max(min, size * (avail / w2) * .995);
+      el.style.fontSize = size + "px";
+    }
+    return size;
+  }
+  function fitAll(){
+    if (nameEl){
+      var l1 = nameEl.querySelector(".l1");
+      var l2 = nameEl.querySelector(".l2");
+      if (l1){
+        var s = fitLine(l1, nameEl, 150, 36, .955);
+        if (l2){ l2.style.fontSize = s + "px"; }
+      }
+    }
+    if (talkEl && talkEl.parentElement){ fitLine(talkEl, talkEl.parentElement, 140, 40, .94); }
+  }
+  var rzT;
+  window.addEventListener("resize", function(){ clearTimeout(rzT); rzT = setTimeout(function(){ fitAll(); stackFX(); }, 120); });
+  window.addEventListener("orientationchange", function(){ setTimeout(fitAll, 250); });
+  if (document.fonts && document.fonts.ready){ document.fonts.ready.then(fitAll); }
+  if (document.fonts && document.fonts.addEventListener){ document.fonts.addEventListener("loadingdone", fitAll); }
+  window.addEventListener("load", fitAll);
+  fitAll();
+  setTimeout(fitAll, 350);
+  setTimeout(fitAll, 1200);
+  setTimeout(fitAll, 3000);
+
+  /* ── footer ── */
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("toTop").addEventListener("click", function(){
+    window.scrollTo({top:0, behavior: reduce ? "auto" : "smooth"});
+  });
+
+  onScroll();
+})();
+</script>
+
 </body>
 </html>
